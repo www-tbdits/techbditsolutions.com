@@ -1,0 +1,1652 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECH BD IT SOLUTIONS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f2f4f8;
+      color: #333;
+    }
+    header {
+      background: #002856;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo-title {
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+      width: auto;
+      margin-right: 15px;
+      border-radius: 5px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    nav {
+      background: #004aad;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 40px 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #004aad;
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #e6f0ff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .featured-category {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .featured-category .card {
+      flex: 1 1 200px;
+      background: #fff7e6;
+      border: 1px solid #ffe4b5;
+      font-weight: normal;
+      font-size: 0.95rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #003380;
+    }
+    footer {
+      background: #002856;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #004aad;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp:hover {
+      background-color: #1ebe57;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+
+      <div>
+        <h1 style="font-size: 40px;">TECH BD IT SOLUTIONS</h1>
+  <p style="font-size: 10px; font-family: Arial, sans-serif;">We build your technology-driven future by providing reliable IT products and corporate IT services
+</p>
+      </div>
+    </div>
+  </header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#testimonials">Testimonials</a>
+ <a href="#work with us">Work With Us</a>
+  <a href="#contact">Contact</a>
+
+<div class="customer-service" onclick="openWhatsApp()">
+  <i class="fas fa-headset"></i>
+  <span>24/7 Support</span>
+</div>
+
+<script>
+  function openWhatsApp() {
+    const url = "https://wa.me/8801323056735";
+    window.open(url, "_blank");
+  }
+</script>
+</nav>
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #004aad;
+    padding: 12px 20px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 6px 10px;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+  }
+
+  nav a:hover {
+    background-color: #003380;
+  }
+
+  .customer-service {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 1rem;
+    gap: 8px;
+    background-color: #002766;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  .customer-service i {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .customer-service {
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+      padding: 10px 0;
+      font-size: 1.1rem;
+    }
+  }
+</style>
+  <title>Search Example</title>
+  <style>
+    .search-box {
+      position: relative;
+      width: 400px;
+      margin: 20px auto;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 12px 70px 12px 15px;
+      font-size: 16px;
+      border: 2px solid #004aad;
+      border-radius: 30px;
+      box-sizing: border-box;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .clear-btn {
+      right: 40px;
+      color: red;
+    }
+    .search-btn {
+      right: 10px;
+      color: #004aad;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px auto;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+<style>
+  .headline {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase; /* Boro hater lekha */
+  }
+
+  .subtext {
+    font-size: 24px;
+    text-transform: uppercase; /* Boro hater lekha */
+  }
+</style>
+
+<section id="home" style="padding: 18px 20px; text-align: center;">
+  <h2 class="headline">Your Team, Our Tech Support</h2>
+  <p class="subtext">Trust in Our Experience</p>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>বড় সার্চ বার সহ Responsive Search</title>
+  <style>
+    .search-wrapper {
+      position: relative;
+      max-width: 600px;   /* বড় করা হলো */
+      width: 95%;
+      margin: 20px auto;
+    }
+
+    /* সার্চ ইনপুট ফিল্ড */
+    #searchInput {
+      width: 100%;
+     padding: 15px 110px 15px 20px;/* ডান পাশের বাটনের জন্য জায়গা */
+      font-size: 18px;               /* বড় ফন্ট সাইজ */
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.3s ease;
+      height: 50px;                  /* ইনপুটের উচ্চতা বাড়ানো */
+    }
+
+    #searchInput:focus {
+      border-color: #007BFF;
+    }
+
+    /* ইনপুটের ভিতরের বাটনগুলোর জন্য স্টাইল */
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 40px;                   /* বড় বাটন */
+      height: 40px;
+      cursor: pointer;
+      font-size: 22px;              /* বড় আইকন */
+      line-height: 40px;
+      text-align: center;
+      padding: 0;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    /* ক্লিয়ার বাটনের অবস্থান */
+    .clear-btn {
+      right: 50px;                  /* ডান থেকে ৫০px দূরে */
+      border-left: none;
+    }
+
+    /* সার্চ বাটনের অবস্থান */
+    .search-btn {
+      right: 5px;                   /* ডান থেকে ৫px দূরে */
+      border-left: none;
+    }
+
+    /* মোবাইলের জন্য রেস্পন্সিভ */
+    @media (max-width: 480px) {
+      .search-wrapper {
+        max-width: 100%;
+      }
+      #searchInput {
+        font-size: 16px;
+        padding: 12px 90px 12px 15px;
+        height: 45px;
+      }
+      .btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+      }
+      .clear-btn {
+        right: 45px;
+      }
+      .search-btn {
+        right: 5px;
+      }
+    }
+
+    /* নমুনা কার্ড স্টাইল */
+    .card {
+      max-width: 600px;
+      width: 95%;
+      margin: 10px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fafafa;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Type to search" />
+    <button class="btn clear-btn" onclick="clearSearch()">❌</button>
+    <button class="btn search-btn" onclick="searchFunction()">🔍</button>
+  </div>
+
+  <script>
+    function searchFunction() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      let found = false;
+
+      cards.forEach(card => {
+        if (card.innerText.toLowerCase().includes(input)) {
+          card.style.display = "block";
+          found = true;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      if (!found && input !== "") {
+        alert("Sorry! No results found.");
+      }
+    }
+
+    function clearSearch() {
+      const input = document.getElementById("searchInput");
+      input.value = "";
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(card => card.style.display = "block");
+      input.focus();
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        searchFunction();
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+</section>
+
+<section id="products">
+  <h2 class="section-title">Featured Categories</h2>
+  <div class="featured-category">
+    <div class="card">
+      <i class="fas fa-server"></i>
+      <p>Networking Server</p>
+    </div>
+  <div class="card">
+  <i class="fas fa-network-wired"></i>
+  <p>Routers, Switches, Modems, Load Balancer, Router</p>
+</div>
+    <div class="card">
+ <i class="fas fa-video-camera"></i>
+      <p>CCTV / IP Cameras, DVR, NVR, XVR</p>
+    </div>
+    <div class="card">
+     <i class="fas fa-lock"></i><i class="fas fa-fingerprint"></i> 
+      <p>Access Control System</p>
+    </div>
+    <div class="card">
+  <i class="fas fa-phone"></i>
+  <p>IP Phone / PBX System</p>
+</div>
+    <div class="card">
+      <i class="fab fa-windows"></i>
+      <p>Windows Administrator</p>
+    </div>
+  <div class="card">
+      <i class="fab fa-windows"></i>
+      <p>Windows License</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-laptop"></i>
+      <p>Laptops</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-computer"></i>
+      <p>Desktops PC & All-in-One PCs</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-tablet-alt"></i>
+      <p>Tablets, Smartphones & Smartwatches</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-microchip"></i>
+      <p>CPU, RAM, Graphics Card, Cooling Fan</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-hdd"></i>
+      <p>HDD, SSD, M.2, USB, Tape Backup, MicroSD</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-desktop"></i>
+      <p>Monitor, Keyboard, Mouse, Webcam, Projector</p>
+    </div>
+<div class="card">
+  <i class="fas fa-camera"></i>
+  <p>Drone, Action Camera</p>
+</div>
+  <div class="card">
+  <i class="fas fa-receipt"></i>
+  <p>POS Printer</p>
+</div>
+<div class="card">
+      <i class="fas fa-print"></i>
+      <p>Laser Printer</p>
+    </div>
+   <div class="card">
+  <i class="fas fa-print"></i>
+  <p>All-in-One Printer</p>
+</div>
+  <div class="card">
+  <i class="fas fa-file-image"></i> 
+  <p>Scanner Devices</p>
+</div>
+    <div class="card">
+      <i class="fas fa-cash-register"></i>
+      <p>POS Devices</p>
+    </div>
+    <div class="card">
+  <i class="fas fa-video"></i> <!-- অথবা fa-video-camera -->
+  <p>Projector</p>
+</div>
+    <div class="card">
+      <i class="fas fa-code-branch"></i>
+      <p>Web Development</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-paint-brush"></i>
+      <p>Graphic Design</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-search"></i>
+      <p>SEO Services</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bullhorn"></i>
+      <p>Digital Marketing</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-cloud"></i>
+      <p>OS, Antivirus, Cloud, Hosting, SDK, API Key</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <p>Electrical</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <p>Generator</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-UPS"></i>
+      <p>IPS / UPS, Online UPS</p>
+    </div>
+  <div class="card">
+  <i class="fas fa-plug"></i>
+  <p>Surge Protector, Docking Station</p>
+</div>
+    <div class="card">
+      <i class="fas fa-ellipsis-h"></i>
+      <p>Other Services</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+#products {
+  #products .section-title {
+    text-align: left;
+    font-size: 1rem;
+    color: #004aad;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 4px;
+    max-width: fit-content;
+  }
+  #products .section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 30px;
+    background-color: #004aad;
+    border-radius: 2px;
+  }
+
+  .featured-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;  /* কার্ডের মাঝে ফাঁক কম */
+    padding: 0.3px; /* ডান-বাম থেকে গরিডের প্যাডিং কমালো */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* কার্ড ডিজাইন */
+  .card {
+    background: #fff;
+    padding: 5px 5px; /* ডান-বাম থেকে প্যাডিং কমিয়ে একটু ঘেঁষা লাগবে */
+    border-radius: 20px;
+    box-shadow: 0 3px 0 2px rgba(0,0,0,0.03);
+    border-left: 5px solid #004aad;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    max-width: 60%;
+    margin: 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  }
+
+  .card i {
+    font-size: 1.3rem;
+    color: #004aad;
+    margin-bottom: 6px;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  @media (max-width: 992px) {
+    .featured-category {
+      grid-template-columns: repeat(2, 1fr); /* ট্যাবলেট-এ ২ কলাম */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .featured-category {
+      grid-template-columns: 1fr; /* মোবাইলে ১ কলাম */
+      padding: 0 3px;
+    }
+
+    #products .section-title {
+      font-size: 0.7rem;
+      margin-bottom: 5px;
+    }
+
+    .card {
+      padding: 5px 3px;
+    }
+
+    .card i {
+      font-size: .7rem;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 0.7rem;
+    }
+  }
+</style>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>Networking & Server</h3>
+      <ul>
+        <li>Network Setup & Maintenance</li>
+        <li>Server Installation & Configuration</li>
+        <li>Troubleshooting & Support</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Surveillance Systems</h3>
+      <ul>
+        <li>CCTV Installation</li>
+        <li>IP Camera Setup</li>
+        <li>Remote Viewing Configuration</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Software Installation</h3>
+      <ul>
+        <li>Windows & OS Installation</li>
+        <li>Software Licensing</li>
+        <li>Troubleshooting Issues</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Remote Support</h3>
+      <ul>
+        <li>Remote Desktop Assistance</li>
+        <li>Online Configuration</li>
+        <li>TeamViewer/AnyDesk</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Printing Solutions</h3>
+      <ul>
+        <li>POS & Laser Printer Setup</li>
+        <li>All-in-One Printer Support</li>
+        <li>Scanner Devices</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Security & Access</h3>
+      <ul>
+        <li>Access Control System</li>
+        <li>Biometric/RFID Setup</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Communication</h3>
+      <ul>
+        <li>IP Phone Setup</li>
+        <li>PBX System Installation</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Power Solutions</h3>
+      <ul>
+        <li>Generator Installation</li>
+        <li>IPS/UPS Setup</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Website Design</h3>
+      <ul>
+        <li>Responsive Design</li>
+        <li>Custom Development</li>
+        <li>WordPress CMS</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <h3>Other Services</h3>
+      <ul>
+        <li>General IT Support</li>
+        <li>PC, Laptop Sales</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  #services {
+    padding: 60px 20px;
+    background: #f2f6fc;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #004aad;
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 6px solid #004aad;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  }
+
+  .service-card h3 {
+    color: #004aad;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .service-card ul {
+    padding-left: 18px;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .service-card ul li {
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .service-card {
+      padding: 20px;
+    }
+  }
+.section-title {
+  text-align: left; 
+  font-size: 2.5rem;
+  color: #004aad;
+  margin-bottom: 40px;
+  font-weight: 700;
+</style>
+ </section>
+
+<section id="gallery">
+    <h2 style="color: #004aad; margin-bottom: 20px;">Gallery</h2>
+  </div>
+
+  <!-- Button (Centered vertically and horizontally in its container) -->
+  <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+    <button id="showMessageBtn" style="
+      background-color: #004aad;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 74, 173, 0.4);
+      ">
+      View Our Work
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="messageModal" style="
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  ">
+    <div style="
+      background: #fff;
+      padding: 30px 35px;
+      border-radius: 12px;
+      max-width: 380px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      position: relative;
+      text-align: center;
+      color: #333;
+      font-size: 1.15rem;
+      line-height: 1.5;
+    ">
+      <span id="closeModal" style="
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #aaa;
+        transition: color 0.2s ease;
+        user-select: none;
+      ">&times;</span>
+      
+      <p>
+        To see our work, please visit our 
+        <a href="https://www.facebook.com/techbditsolutions.fb/" target="_blank" rel="noopener noreferrer" style="color: #004aad; font-weight: 700; text-decoration: none;">
+          Facebook Page
+        </a>.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  const showMessageBtn = document.getElementById('showMessageBtn');
+  const messageModal = document.getElementById('messageModal');
+  const closeModalBtn = document.getElementById('closeModal');
+
+  showMessageBtn.addEventListener('click', () => {
+    messageModal.style.display = 'flex';
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    messageModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === messageModal) {
+      messageModal.style.display = 'none';
+    }
+  });
+</script>
+</section>
+<section id="testimonials">
+  <div class="testimonial-header">
+    <h2>Testimonials</h2>
+    <div id="testimonialStatus"></div>
+  </div>
+
+  <div class="testimonials" id="testimonialContainer"></div>
+
+  <button class="btn-see-more" onclick="loadMore()" id="seeMoreBtn">See More</button>
+  <button class="btn-see-more" onclick="seeLess()" id="seeLessBtn">See Less</button>
+  <button class="btn-submit" onclick="showForm()">Add Your Testimonial</button>
+
+  <!-- Popup Form -->
+  <div id="formPopup" class="form-popup">
+    <form id="testimonialForm" class="form-container" onsubmit="submitTestimonial(event)">
+      <h3>Add Your Testimonial</h3>
+      <textarea id="testimonialText" placeholder="Write your feedback..." required></textarea>
+      <button type="submit" class="btn-submit">Submit</button>
+      <button type="button" class="btn-cancel" onclick="hideForm()">Cancel</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  #testimonials }
+    text-align: center;
+    padding: 30px 15px;
+    background: #f9f9f9;
+  }
+
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+    margin: 0 auto 15px auto;
+    padding: 0 10px;
+  }
+
+  .testimonial-header h2 {
+    margin: 0;
+    color: #004aad;
+    font-size: 1.6rem;
+  }
+
+  #testimonialStatus {
+    font-weight: 600;
+    color: #004aad;
+    white-space: nowrap;
+    user-select: none;
+    font-size: 1rem;
+  }
+
+  .card {
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.03);
+    border-left: 5px solid #004aad;
+    text-align: center;
+    max-width: 600px;
+    margin: 10px auto;
+    font-style: italic;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-see-more,
+  .btn-submit {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-see-more:hover,
+  .btn-submit:hover {
+    background-color: #003080;
+  }
+
+  .btn-see-more:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  #seeLessBtn {
+    display: none;
+  }
+
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+    position: relative;
+  }
+
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .btn-cancel {
+    background-color: #ccc;
+    color: black;
+    margin-left: 10px;
+  }
+
+  .btn-cancel:hover {
+    background-color: #999;
+  }
+</style>
+
+<script>
+  const TOTAL = 5000;
+  const INITIAL = 3;
+  const BATCH_SIZE = 5;
+  let currentIndex = 0;
+  const seeMoreHistory = [];
+
+  const messages = [
+    "Amazing support and service!",
+    "Very professional and polite.",
+    "Loved the quick turnaround.",
+    "Excellent work as always.",
+    "Fast and friendly experience.",
+    "Highly recommended!",
+    "Top-tier communication.",
+    "Impressive attention to detail.",
+    "Super efficient team.",
+    "Five-star service!",
+    "Smooth and easy process.",
+    "Will definitely come back again.",
+    "Always a pleasure to work with.",
+    "Quick replies, great outcome."
+  ];
+
+  function generateTestimonial() {
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    return `"${msg}"`;
+  }
+
+  function updateStatus() {
+    const status = document.getElementById("testimonialStatus");
+    status.innerHTML = `Showing ${currentIndex} of ${TOTAL}<span style="color:#ff6600; font-weight:bold;">+</span> testimonials`;
+  }
+
+  function loadTestimonials(count) {
+    const container = document.getElementById("testimonialContainer");
+    let end = Math.min(currentIndex + count, TOTAL);
+    const batch = [];
+
+    for (let i = currentIndex; i < end; i++) {
+      const card = document.createElement("div");
+      card.className = "card auto-loaded";
+      card.textContent = generateTestimonial();
+      container.appendChild(card);
+      batch.push(card);
+    }
+
+    seeMoreHistory.push(batch);
+    currentIndex = end;
+
+    const seeMoreBtn = document.getElementById("seeMoreBtn");
+    if (currentIndex >= TOTAL) {
+      seeMoreBtn.disabled = true;
+      seeMoreBtn.innerText = "All 5000 Testimonials Loaded ✅";
+    } else {
+      seeMoreBtn.disabled = false;
+      seeMoreBtn.innerText = "See More";
+    }
+
+    updateStatus();
+  }
+
+  function loadMore() {
+    loadTestimonials(BATCH_SIZE);
+    document.getElementById("seeLessBtn").style.display = "block";
+  }
+
+  function seeLess() {
+    if (seeMoreHistory.length > 0) {
+      const lastBatch = seeMoreHistory.pop();
+      lastBatch.forEach(card => card.remove());
+      currentIndex -= lastBatch.length;
+
+      const seeMoreBtn = document.getElementById("seeMoreBtn");
+      if (currentIndex < TOTAL) {
+        seeMoreBtn.disabled = false;
+        seeMoreBtn.innerText = "See More";
+      }
+
+      updateStatus();
+
+      if (seeMoreHistory.length === 0) {
+        document.getElementById("seeLessBtn").style.display = "none";
+      }
+    }
+  }
+
+  window.onload = () => {
+    loadTestimonials(INITIAL);
+    updateStatus();
+    document.getElementById("seeLessBtn").style.display = "none";
+  };
+
+  function showForm() {
+    document.getElementById("formPopup").style.display = "flex";
+  }
+
+  function hideForm() {
+    document.getElementById("formPopup").style.display = "none";
+  }
+
+  function submitTestimonial(event) {
+    event.preventDefault();
+    const text = document.getElementById("testimonialText").value;
+    if (text.trim() !== "") {
+      const container = document.getElementById("testimonialContainer");
+      const card = document.createElement("div");
+      card.className = "card user-submitted";
+      card.textContent = `"${text}"`;
+      container.prepend(card);
+      document.getElementById("testimonialText").value = "";
+      hideForm();
+    }
+  }
+</script>
+  <style>
+    body } 
+</section>
+      font-family: Arial, sans-serif;
+      margin: 4px;
+      background-color: #f4f4f4;
+    }
+
+    .join-us-section {
+      position: relative;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .job-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .job-description p, .job-description ul {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .apply-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      float: right;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .apply-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 9999;
+      padding: 40px;
+      box-sizing: border-box;
+      display: none; /* Hidden by default */
+    }
+
+    .overlay-content {
+      max-width: 600px;
+      background: #222;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .overlay-content h2 {
+      margin-bottom: 15px;
+    }
+
+    .overlay-close {
+      margin-top: 20px;
+      background-color: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .overlay-close:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+
+<section id="work with us">
+  <h2>Join Us</h2>  
+  <section class="join-us-section">
+    <div class="job-title">Job Opening: IT Technician</div>
+    <div class="job-description">
+      <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+      <p><strong>Employment Type:</strong> Full-Time</p>
+      
+      <p><strong>Job Summary:</strong><br>
+      We are seeking a reliable and technically skilled IT Technician to join our team. The ideal candidate will have strong knowledge in hardware troubleshooting, network maintenance, and end-user support.</p>
+      
+      <p><strong>Key Responsibilities:</strong></p>
+      <ul>
+        <li>Install, configure, and maintain computer hardware, software, systems, and networks.</li>
+        <li>Troubleshoot hardware and software issues in a timely manner.</li>
+        <li>Monitor system performance and ensure efficiency and reliability.</li>
+        <li>Provide technical support to staff and resolve IT-related problems.</li>
+      </ul>
+
+      <p><strong>Requirements:</strong></p>
+      <ul>
+        <li>HSC or higher education in IT or related field</li>
+        <li>Minimum 2 years of experience in IT support or technician roles.</li>
+        <li>Knowledge of Windows OS, networking, and basic server management.</li>
+        <li>Strong communication and problem-solving skills.</li>
+      </ul>
+
+      <p><strong>Salary:</strong> Negotiable, based on experience</p>
+
+      <!-- Apply Button -->
+      <a href="#" class="apply-btn" onclick="showOverlay(event)">Apply Now</a>
+    </div>
+  </section>
+</section>
+
+<!-- Fullscreen Overlay Message -->
+<div class="overlay" id="overlayMessage">
+  <div class="overlay-content">
+    <h2>🚫 Applications Currently Closed</h2>
+    <p>Thank you for your interest. Unfortunately, we are not accepting applications for this position at the moment.</p>
+    <button class="overlay-close" onclick="hideOverlay()">Close</button>
+  </div>
+</div>
+
+<script>
+  function showOverlay(event) {
+    event.preventDefault();
+    document.getElementById("overlayMessage").style.display = "flex";
+  }
+
+  function hideOverlay() {
+    document.getElementById("overlayMessage").style.display = "none";
+  }
+</script>
+
+  </section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    <strong>TECH BD IT SOLUTIONS</strong> is a progressive and trusted IT company providing modern and effective technology solutions in Bangladesh. Our primary goal is to simplify and secure your business operations through innovative IT products and services. We cater to both corporate clients and individuals by offering fully customized solutions tailored to their unique needs.
+
+  </p>
+  <p>
+   Our team of experienced technologists and engineers is committed to delivering top-quality service with professionalism and reliability. We embrace the latest technology trends to help our clients achieve business growth and operational efficiency.
+
+  </p>
+  <p>
+    <strong>🎯Vision:</strong>To advance the technology sector in Bangladesh by providing world-class IT services and contributing to the country’s digital transformation.
+<br>
+    <strong> 🚀Mission:</strong>To deliver the highest quality technology and services at affordable prices, ensuring client satisfaction and business success.
+
+  </p>
+  <p>
+  <strong>📞🎧 Customer Support: 24/7</strong> 
+<br>
+We are committed to offering fast, professional, and friendly support—any time you need it.
+<br>
+<strong>🛠️ Our Support Services Include:</strong> 
+<br>
+<strong>💬 Live Chat – :</strong> Instant assistance via our website
+<br>
+<strong>📱 WhatsApp Support :</strong>– Quick messaging for urgent queries
+<br>
+<strong>☎️ Phone Call Support</strong> – Direct access to our expert agents
+<br>
+<strong>✅ Always Available — 24/7, 365 Days a Year</strong>
+<br>
+
+Because your business deserves uninterrupted support.
+
+  </p>
+</section>
+
+  <section id="contact">
+  <h2>Contact Us</h2>
+  <p>Feel free to reach out to us through the following contact details:</p>
+  <div>
+    <p><strong>📞 Phone:</strong> +8809638391197 | +8801516-573873 | +8801323056735</p>
+    <p><strong>📧 Email:</strong> <a href="mailto:info.techbditsolutions@gmail.com">info.techbditsolutions@gmail.com</a></p>
+<p><strong>🅕Facebook:</strong> <a href="https://www.facebook.com/techbditsolutions.fb/">https://www.facebook.com/techbditsolutions.fb/</a></p>
+    <p><strong>📍 Address:</strong> Banglades,Dhaka-1205</p>
+  </div>
+</section>
+
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/01323056735" target="_blank" class="whatsapp" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Live Chat Button -->
+<div id="liveChatButton" class="live-chat-button" title="Live Chat">
+  <i class="fas fa-comments"></i>
+</div>
+
+<!-- Live Chat Window -->
+<div id="liveChatWindow" class="live-chat-window" style="display:none;">
+  <div class="live-chat-header">
+    Live Chat
+    <span id="closeChat" style="cursor:pointer; float:right;">&times;</span>
+  </div>
+  <div id="chatMessages" class="chat-messages"></div>
+  <textarea id="chatInput" placeholder="Type your message..." rows="3"></textarea>
+  <button id="sendChat">Send</button>
+</div>
+
+<style>
+  /* Live Chat Button */
+  .live-chat-button {
+    position: fixed;
+    bottom: 150px;
+    right: 30px;
+    background: #004aad;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  .live-chat-button:hover {
+    background-color: #003380;
+  }
+
+  /* Live Chat Window */
+  .live-chat-window {
+    position: fixed;
+    bottom: 210px;
+    right: 30px;
+    width: 300px;
+    max-width: 90vw;
+    background: white;
+    border: 1px solid #004aad;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  .live-chat-header {
+    background: #004aad;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  #chatMessages {
+    height: 150px;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  #chatInput {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    border-bottom: 1px solid #ddd;
+  }
+  #sendChat {
+    background: #004aad;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+  }
+  #sendChat:hover {
+    background-color: #003380;
+  }
+</style>
+
+<script>
+  const liveChatButton = document.getElementById('liveChatButton');
+  const liveChatWindow = document.getElementById('liveChatWindow');
+  const closeChat = document.getElementById('closeChat');
+  const sendChat = document.getElementById('sendChat');
+  const chatMessages = document.getElementById('chatMessages');
+  const chatInput = document.getElementById('chatInput');
+
+  liveChatButton.addEventListener('click', () => {
+    liveChatWindow.style.display = 'flex';
+    liveChatButton.style.display = 'none';
+    chatInput.focus();
+  });
+
+  closeChat.addEventListener('click', () => {
+    liveChatWindow.style.display = 'none';
+    liveChatButton.style.display = 'flex';
+  });
+
+  sendChat.addEventListener('click', () => {
+    const msg = chatInput.value.trim();
+    if(msg === '') return;
+
+    // Show user message
+    const userMsgDiv = document.createElement('div');
+    userMsgDiv.style.textAlign = 'right';
+    userMsgDiv.style.margin = '5px 0';
+    userMsgDiv.textContent = 'You: ' + msg;
+    chatMessages.appendChild(userMsgDiv);
+
+    // Simple bot reply simulation
+    const botMsgDiv = document.createElement('div');
+    botMsgDiv.style.textAlign = 'left';
+    botMsgDiv.style.margin = '5px 0';
+    botMsgDiv.textContent = 'Tech BD: Thanks for your message! We will get back to you soon.';
+    chatMessages.appendChild(botMsgDiv);
+
+    chatInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  });
+
+  // Send message on Enter key
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendChat.click();
+    }
+  });
+</script>
+  <button class="scroll-top" id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+<!-- Refresh Button (Top-most) -->
+<button onclick="location.reload();" style="position:fixed; bottom:200px; right:30px; background:#004aad; color:white; padding:10px 15px; border:none; border-radius:50%; font-size:18px; cursor:pointer; z-index:1000;" title="Refresh">
+  🔄
+</button>
+</body>
+</script>
+
+
+<!-- Font Awesome (আইকন দেখানোর জন্য প্রয়োজন) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<footer style="background:#002856; color:#fff; padding:40px 20px; text-align:center; font-family: 'Roboto', sans-serif;">
+  <div style="max-width: 600px; margin: auto;">
+    
+    <!-- App Section Title -->
+    <p style="font-weight: 700; font-size: 1.3rem; margin-bottom: 20px; letter-spacing: 1px;">
+      Experience <span style="color:#3ddc84;">Tech BD IT Solutions</span> App on your mobile
+    </p>
+
+    <!-- App Store Buttons -->
+    <div style="display: flex; justify-content: center; gap: 25px; margin-bottom: 25px; flex-wrap: wrap;">
+      <a href="#" onclick="openModal(event)" style="display: inline-flex; align-items: center; background: #3ddc84; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; min-width: 140px; box-shadow: 0 4px 10px rgba(61,220,132,0.5); transition: background-color 0.3s ease;">
+        <i class="fab fa-google-play" style="margin-right: 10px; font-size: 1.3rem;"></i> Google Play
+      </a>
+      <a href="#" onclick="openModal(event)" style="display: inline-flex; align-items: center; background: #000; color: white; padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; min-width: 140px; box-shadow: 0 4px 10px rgba(0,0,0,0.6); transition: background-color 0.3s ease;">
+        <i class="fab fa-apple" style="margin-right: 10px; font-size: 1.3rem;"></i> App Store
+      </a>
+    </div>
+
+
+    <!-- Designer Credit -->
+    <p style="
+      font-size: 0.95rem;
+      color: #ffffffdd;
+      letter-spacing: 0.6px;
+      margin-top: 20px;
+      font-weight: 500;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 15px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    ">
+     <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; color: white; letter-spacing: 0.5px; line-height: 1.6; margin-top: 20px; text-align: center;">
+  <i class="fas fa-laptop-code" style="color:#3ddc84; font-size: 1.2rem; margin-right: 6px;"></i> 
+  <span style="color: white;">Website Design & Development by&nbsp;</span>
+  <span style="color: #3ddc84; font-weight: 600;">Mohammad Jems Ahmed Joy</span>
+</p>
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" style="display:none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);">
+    <div style="background-color: #fff; margin: 15% auto; padding: 20px; border-radius: 10px; max-width: 400px; text-align: center; color: #002856; font-family: 'Roboto', sans-serif;">
+      <h2 style="margin-bottom: 15px;">Coming Soon!</h2>
+      <p style="font-size: 1rem; margin-bottom: 20px;">Our app is not available yet. Please stay tuned for updates.</p>
+      <button onclick="closeModal()" style="background:#3ddc84; color:#fff; border:none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: 600;">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(event) {
+      event.preventDefault(); // Stop page jump
+      document.getElementById('myModal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+  </script>
+    <!-- Copyright -->
+    <p style="font-size: 0.95rem; opacity: 0.75; letter-spacing: 0.5px; margin-top: 10px;">
+      &copy; 2025 <strong>Tech BD IT Solutions</strong> | All rights reserved.
+    </p>
+  </script>
+</footer>

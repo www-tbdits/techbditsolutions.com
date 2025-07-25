@@ -1522,9 +1522,91 @@ Because your business deserves uninterrupted support.
 <a href="https://wa.me/01323056735" target="_blank" class="whatsapp" aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
+<title>Live Chat - Tech BD</title>
+  <style>
+    /* Live Chat Button */
+    .live-chat-button {
+      position: fixed;
+      bottom: 150px;
+      right: 30px;
+      background: #004aad;
+      color: white;
+      padding: 12px 15px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+    .live-chat-button:hover {
+      background-color: #003380;
+    }
 
-<!-- Live Chat Button -->
-<div id="liveChatWindow" class="live-chat-window" style="display:none;">
+    /* Live Chat Window */
+    .live-chat-window {
+      position: fixed;
+      bottom: 210px;
+      right: 30px;
+      width: 300px;
+      max-width: 90vw;
+      background: white;
+      border: 1px solid #004aad;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+    }
+    .live-chat-header {
+      background: #004aad;
+      color: white;
+      padding: 10px;
+      font-weight: 700;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .chat-messages {
+      height: 150px;
+      padding: 10px;
+      overflow-y: auto;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+    #chatInput {
+      width: 100%;
+      border: none;
+      padding: 10px;
+      font-size: 14px;
+      resize: none;
+      border-bottom: 1px solid #ddd;
+    }
+    #sendChat {
+      background: #004aad;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    #sendChat:hover {
+      background-color: #003380;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔘 Live Chat Button -->
+<div id="liveChatButton" class="live-chat-button" title="Chat with us">
+  💬
+</div>
+
+<!-- 💬 Live Chat Window -->
+<div id="liveChatWindow" class="live-chat-window">
   <div class="live-chat-header">
     Live Chat
     <span id="closeChat" style="cursor:pointer; float:right;">&times;</span>
@@ -1533,81 +1615,6 @@ Because your business deserves uninterrupted support.
   <textarea id="chatInput" placeholder="Type your message..." rows="3"></textarea>
   <button id="sendChat">Send</button>
 </div>
-
-<style>
-  /* Live Chat Button */
-  .live-chat-button {
-    position: fixed;
-    bottom: 150px;
-    right: 30px;
-    background: #004aad;
-    color: white;
-    padding: 12px 15px;
-    border-radius: 50%;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-  }
-  .live-chat-button:hover {
-    background-color: #003380;
-  }
-
-  /* Live Chat Window */
-  .live-chat-window {
-    position: fixed;
-    bottom: 210px;
-    right: 30px;
-    width: 300px;
-    max-width: 90vw;
-    background: white;
-    border: 1px solid #004aad;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-  }
-  .live-chat-header {
-    background: #004aad;
-    color: white;
-    padding: 10px;
-    font-weight: 700;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  #chatMessages {
-    height: 150px;
-    padding: 10px;
-    overflow-y: auto;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
-  }
-  #chatInput {
-    width: 100%;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    resize: none;
-    border-bottom: 1px solid #ddd;
-  }
-  #sendChat {
-    background: #004aad;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-  }
-  #sendChat:hover {
-    background-color: #003380;
-  }
-</style>
 
 <script>
   const liveChatButton = document.getElementById('liveChatButton');
@@ -1634,15 +1641,16 @@ Because your business deserves uninterrupted support.
 
     // Clear previous messages
     chatMessages.innerHTML = '';
-    
-   addBotMessage('👋 Welcome to Tech BD IT Solutions!');
-  addBotMessage('How can we assist you today?');
-  addBotMessage('Our team is ready to help with any questions or issues you may have.');
-  addBotMessage('Please provide clear and accurate information so we can assist you faster.');
-  addBotMessage('We value your time and will do our best to respond quickly.');
-  addBotMessage('💬 Your message is being forwarded to one of our customer service representatives.');
-  addBotMessage('⌛ All our agents are currently busy. Please wait a moment — we’ll be with you shortly.');
-  addBotMessage('🤝 Thank you for your patience and for choosing Tech BD.');
+
+    // 8 Friendly English Bot Messages
+    addBotMessage('👋 Welcome to Tech BD IT Solutions!');
+    addBotMessage('How can we assist you today?');
+    addBotMessage('We’re here to help with any questions or technical issues.');
+    addBotMessage('Please provide clear and accurate information so we can assist you faster.');
+    addBotMessage('We’ll do our best to support you as quickly as possible.');
+    addBotMessage('💬 Your message is being forwarded to a customer service representative.');
+    addBotMessage('⌛ All our agents are currently busy. Please hold on for a moment.');
+    addBotMessage('🤝 Thank you for your patience and for reaching out to Tech BD.');
   });
 
   closeChat.addEventListener('click', () => {
@@ -1652,7 +1660,7 @@ Because your business deserves uninterrupted support.
 
   sendChat.addEventListener('click', () => {
     const msg = chatInput.value.trim();
-    if(msg === '') return;
+    if (msg === '') return;
 
     const userMsgDiv = document.createElement('div');
     userMsgDiv.style.textAlign = 'right';
@@ -1660,7 +1668,7 @@ Because your business deserves uninterrupted support.
     userMsgDiv.textContent = 'You: ' + msg;
     chatMessages.appendChild(userMsgDiv);
 
-    addBotMessage('Thanks for your message! We will get back to you soon.');
+    addBotMessage('Thanks for your message! We’ll get back to you shortly.');
 
     chatInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -1673,6 +1681,9 @@ Because your business deserves uninterrupted support.
     }
   });
 </script>
+
+</body>
+</html>
   
   <button class="scroll-top" id="scrollTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>

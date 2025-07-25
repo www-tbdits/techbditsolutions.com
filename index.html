@@ -1650,3 +1650,68 @@ Because your business deserves uninterrupted support.
     </p>
   </script>
 </footer>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Managing Director Info</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #md-popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 2px solid #444;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1000;
+    }
+
+    #md-popup.show {
+      opacity: 1;
+    }
+
+    #md-popup img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="md-popup">
+  <img src="images/MD.jpg" alt="Managing Director">
+  <h2>Md. Jems Ahamed Joy</h2>
+  <p>Managing Director</p>
+</div>
+
+<script>
+  window.onload = function () {
+    const popup = document.getElementById('md-popup');
+    
+    // Show with fade-in
+    popup.classList.add('show');
+
+    // Hide after 2 seconds with fade-out
+    setTimeout(function () {
+      popup.classList.remove('show');
+    }, 2000);
+  };
+</script>
+
+</body>
+</html>

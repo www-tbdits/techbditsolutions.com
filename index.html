@@ -1651,7 +1651,7 @@ Because your business deserves uninterrupted support.
   </script>
 </footer>
 
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1660,6 +1660,7 @@ Because your business deserves uninterrupted support.
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     #overlay {
@@ -1668,41 +1669,65 @@ Because your business deserves uninterrupted support.
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
-      transition: opacity 0.8s ease;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
       z-index: 1000;
     }
 
     #overlay.show {
       opacity: 1;
+      pointer-events: auto;
     }
 
     #md-popup {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px 40px;
+      border-radius: 12px;
       text-align: center;
       color: white;
+      max-width: 500px;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    #overlay.show #md-popup {
+      transform: scale(1);
+      opacity: 1;
     }
 
     #md-popup img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 20px;
-      border: 3px solid #fff;
+      border: 4px solid #ffffff;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     #md-popup h2 {
+      font-size: 26px;
       margin: 10px 0 5px;
-      font-size: 28px;
     }
 
     #md-popup p {
-      font-size: 18px;
+      font-size: 17px;
       margin: 0;
+      color: #f0f0f0;
+    }
+
+    #md-popup .bio {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #dddddd;
     }
   </style>
 </head>
@@ -1712,7 +1737,11 @@ Because your business deserves uninterrupted support.
   <div id="md-popup">
     <img src="images/MD.jpg" alt="Managing Director">
     <h2>Md. Jems Ahamed Joy</h2>
-    <p>Managing Director</p>
+    <p>Managing Director & Web Developer</p>
+    <div class="bio">
+      Driven by innovation, guided by vision — shaping digital experiences that inspire.<br>
+      As the founder and developer behind this platform, I blend creativity with code to bring powerful ideas to life.
+    </div>
   </div>
 </div>
 
@@ -1720,17 +1749,16 @@ Because your business deserves uninterrupted support.
   window.onload = function () {
     const overlay = document.getElementById('overlay');
     
-    // Fade in
+    // Show overlay with animation
     overlay.classList.add('show');
 
-    // Stay for 4 seconds, then fade out
+    // Hide after 4.5 seconds
     setTimeout(function () {
       overlay.classList.remove('show');
-    }, 4000); // 4 seconds
+    }, 4500);
   };
 </script>
 
 </body>
 </html>
-
 

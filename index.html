@@ -1405,7 +1405,7 @@ Because your business deserves uninterrupted support.
 </section>
 
   
- <title>Managing Director Info</title>
+<title>Managing Director Info</title>
   <style>
     body {
       margin: 0;
@@ -1422,7 +1422,7 @@ Because your business deserves uninterrupted support.
       width: 100vw;
       height: 100vh;
       backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1440,13 +1440,13 @@ Because your business deserves uninterrupted support.
     #md-popup {
       background: rgba(255, 255, 255, 0.05);
       padding: 30px 40px;
-      border-radius: 14px;
+      border-radius: 12px;
       text-align: center;
+      color: white;
       max-width: 500px;
       transform: scale(0.8);
       opacity: 0;
       transition: all 0.6s ease;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
     }
 
     #overlay.show #md-popup {
@@ -1455,44 +1455,31 @@ Because your business deserves uninterrupted support.
     }
 
     #md-popup img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid #ffffff;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-    }
-
-    #md-popup img:hover {
-      transform: scale(1.05);
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     #md-popup h2 {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin: 10px 0 8px;
-      color: #f5f5f7;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      font-size: 26px;
+      margin: 10px 0 5px;
     }
 
     #md-popup p {
-      font-size: 18px;
-      font-style: italic;
-      color: #bbb;
-      margin: 0 0 15px 0;
-      letter-spacing: 1px;
+      font-size: 17px;
+      margin: 0;
+      color: #f0f0f0;
     }
 
     #md-popup .bio {
-      font-size: 16px;
+      margin-top: 15px;
+      font-size: 15px;
       line-height: 1.6;
-      color: #dcdcdccc;
-      font-weight: 500;
-      letter-spacing: 0.3px;
+      color: #dddddd;
     }
   </style>
 </head>
@@ -1502,7 +1489,7 @@ Because your business deserves uninterrupted support.
   <div id="md-popup">
     <img src="images/MD.jpg" alt="Managing Director" />
     <h2>Md. Jems Ahmed Joy</h2>
-    <p>Managing Director &amp; Web Developer</p>
+    <p>Managing Director & Web Developer</p>
     <div class="bio">
       Driven by innovation, guided by vision — shaping digital experiences that inspire.<br />
       As the founder and developer behind this platform, I blend creativity with code to bring powerful ideas to life.
@@ -1513,9 +1500,11 @@ Because your business deserves uninterrupted support.
 <script>
   window.onload = function () {
     const overlay = document.getElementById('overlay');
-
+    
+    // Show overlay with animation
     overlay.classList.add('show');
 
+    // Hide after 2 seconds
     setTimeout(function () {
       overlay.classList.remove('show');
     }, 2000);
@@ -1524,8 +1513,6 @@ Because your business deserves uninterrupted support.
 
 </body>
 </html>
-
-  
 
 <!-- WhatsApp Button -->
 <a href="https://wa.me/01323056735" target="_blank" class="whatsapp" aria-label="Chat on WhatsApp">

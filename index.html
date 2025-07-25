@@ -1411,6 +1411,8 @@ Because your business deserves uninterrupted support.
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #fff;
     }
 
     #overlay {
@@ -1420,7 +1422,7 @@ Because your business deserves uninterrupted support.
       width: 100vw;
       height: 100vh;
       backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.65);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1438,13 +1440,13 @@ Because your business deserves uninterrupted support.
     #md-popup {
       background: rgba(255, 255, 255, 0.05);
       padding: 30px 40px;
-      border-radius: 12px;
+      border-radius: 14px;
       text-align: center;
-      color: white;
       max-width: 500px;
       transform: scale(0.8);
       opacity: 0;
       transition: all 0.6s ease;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
     }
 
     #overlay.show #md-popup {
@@ -1453,31 +1455,44 @@ Because your business deserves uninterrupted support.
     }
 
     #md-popup img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid #ffffff;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    #md-popup img:hover {
+      transform: scale(1.05);
     }
 
     #md-popup h2 {
-      font-size: 26px;
-      margin: 10px 0 5px;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 10px 0 8px;
+      color: #f5f5f7;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
 
     #md-popup p {
-      font-size: 17px;
-      margin: 0;
-      color: #f0f0f0;
+      font-size: 18px;
+      font-style: italic;
+      color: #bbb;
+      margin: 0 0 15px 0;
+      letter-spacing: 1px;
     }
 
     #md-popup .bio {
-      margin-top: 15px;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
-      color: #dddddd;
+      color: #dcdcdccc;
+      font-weight: 500;
+      letter-spacing: 0.3px;
     }
   </style>
 </head>
@@ -1485,11 +1500,11 @@ Because your business deserves uninterrupted support.
 
 <div id="overlay">
   <div id="md-popup">
-    <img src="images/MD.jpg" alt="Managing Director">
-    <h2>Md. Jems Ahamed Joy</h2>
-    <p>Managing Director & Web Developer</p>
+    <img src="images/MD.jpg" alt="Managing Director" />
+    <h2>Md. Jems Ahmed Joy</h2>
+    <p>Managing Director &amp; Web Developer</p>
     <div class="bio">
-      Driven by innovation, guided by vision — shaping digital experiences that inspire.<br>
+      Driven by innovation, guided by vision — shaping digital experiences that inspire.<br />
       As the founder and developer behind this platform, I blend creativity with code to bring powerful ideas to life.
     </div>
   </div>
@@ -1498,11 +1513,9 @@ Because your business deserves uninterrupted support.
 <script>
   window.onload = function () {
     const overlay = document.getElementById('overlay');
-    
-    // Show overlay with animation
+
     overlay.classList.add('show');
 
-    // Hide after 2 seconds
     setTimeout(function () {
       overlay.classList.remove('show');
     }, 2000);

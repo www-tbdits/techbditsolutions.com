@@ -1523,6 +1523,11 @@ Because your business deserves uninterrupted support.
   <i class="fas fa-comments"></i>
 </div>
 
+<!-- Live Chat Button -->
+<div id="liveChatButton" class="live-chat-button" title="Live Chat">
+  <i class="fas fa-comments"></i>
+</div>
+
 <!-- Live Chat Window -->
 <div id="liveChatWindow" class="live-chat-window" style="display:none;">
   <div class="live-chat-header">
@@ -1640,30 +1645,15 @@ Because your business deserves uninterrupted support.
     chatMessages.appendChild(userMsgDiv);
 
     // Simple bot reply simulation
- 
-const botMsgDiv = document.createElement('div');
+    const botMsgDiv = document.createElement('div');
     botMsgDiv.style.textAlign = 'left';
     botMsgDiv.style.margin = '5px 0';
- 
-   botMsgDiv.textContent = '👋 Welcome to Tech BD IT Solutions!';
-   chatMessages.appendChild(botMsgDiv);
+    botMsgDiv.textContent = 'Tech BD: Thanks for your message! We will get back to you soon.';
+    chatMessages.appendChild(botMsgDiv);
 
     chatInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
-  }); 
-
-messages.forEach(msg => {
-  const botMsgDiv = document.createElement('div');
-  botMsgDiv.style.textAlign = 'left';
-  botMsgDiv.style.margin = '5px 0';
-  botMsgDiv.style.color = '#004aad';
-  botMsgDiv.textContent = 'Tech BD: ' + msg;
-  chatMessages.appendChild(botMsgDiv);
-});
-
-// Reset input and scroll
-chatInput.value = '';
-chatMessages.scrollTop = chatMessages.scrollHeight;
+  });
 
   // Send message on Enter key
   chatInput.addEventListener('keydown', (e) => {
@@ -1673,7 +1663,6 @@ chatMessages.scrollTop = chatMessages.scrollHeight;
     }
   });
 </script>
-  
   <button class="scroll-top" id="scrollTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
   </button>

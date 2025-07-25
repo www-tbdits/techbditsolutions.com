@@ -1640,23 +1640,29 @@ Because your business deserves uninterrupted support.
     chatMessages.appendChild(userMsgDiv);
 
     // Simple bot reply simulation
-    const botMsgDiv = document.createElement('div');
-    botMsgDiv.style.textAlign = 'left';
-    botMsgDiv.style.margin = '5px 0';
- 
-   botMsgDiv.textContent = '👋 Welcome to Tech BD IT Solutions!';
-   botMsgDiv.textContent = 'How can we assist you today?';
-   botMsgDiv.textContent = 'We’re here to help with any questions or technical issues.';
-   botMsgDiv.textContent = 'Please provide clear and accurate information so we can assist you faster.';
-   botMsgDiv.textContent = 'We’ll do our best to support you as quickly as possible. ';  
-   botMsgDiv.textContent = 'Your message is being forwarded to a customer service representative.';
-   botMsgDiv.textContent = 'All our agents are currently busy. Please hold on for a moment.';
-   botMsgDiv.textContent = 'Thank you for your patience and for reaching out to Tech BD.';
-    chatMessages.appendChild(botMsgDiv);
+    const messages = [
+  '👋 Welcome to Tech BD IT Solutions!',
+  'How can we assist you today?',
+  'We’re here to help with any questions or technical issues.',
+  'Please provide clear and accurate information so we can assist you faster.',
+  'We’ll do our best to support you as quickly as possible.',
+  '💬 Your message is being forwarded to a customer service representative.',
+  '⌛ All our agents are currently busy. Please hold on for a moment.',
+  '🤝 Thank you for your patience and for reaching out to Tech BD.'
+];
 
-    chatInput.value = '';
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  });
+messages.forEach(msg => {
+  const botMsgDiv = document.createElement('div');
+  botMsgDiv.style.textAlign = 'left';
+  botMsgDiv.style.margin = '5px 0';
+  botMsgDiv.style.color = '#004aad';
+  botMsgDiv.textContent = 'Tech BD: ' + msg;
+  chatMessages.appendChild(botMsgDiv);
+});
+
+// Reset input and scroll
+chatInput.value = '';
+chatMessages.scrollTop = chatMessages.scrollHeight;
 
   // Send message on Enter key
   chatInput.addEventListener('keydown', (e) => {

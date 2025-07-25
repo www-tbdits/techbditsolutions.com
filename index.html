@@ -1524,11 +1524,6 @@ Because your business deserves uninterrupted support.
 </a>
 
 <!-- Live Chat Button -->
-<div id="liveChatButton" class="live-chat-button" title="Live Chat">
-  <i class="fas fa-comments"></i>
-</div>
-
-<!-- Live Chat Window -->
 <div id="liveChatWindow" class="live-chat-window" style="display:none;">
   <div class="live-chat-header">
     Live Chat
@@ -1622,10 +1617,32 @@ Because your business deserves uninterrupted support.
   const chatMessages = document.getElementById('chatMessages');
   const chatInput = document.getElementById('chatInput');
 
+  function addBotMessage(msg) {
+    const botMsgDiv = document.createElement('div');
+    botMsgDiv.style.textAlign = 'left';
+    botMsgDiv.style.margin = '5px 0';
+    botMsgDiv.style.color = '#004aad';
+    botMsgDiv.textContent = 'Tech BD: ' + msg;
+    chatMessages.appendChild(botMsgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
   liveChatButton.addEventListener('click', () => {
     liveChatWindow.style.display = 'flex';
     liveChatButton.style.display = 'none';
     chatInput.focus();
+
+    // Clear previous messages
+    chatMessages.innerHTML = '';
+    
+   addBotMessage('👋 Welcome to Tech BD IT Solutions!');
+  addBotMessage('How can we assist you today?');
+  addBotMessage('Our team is ready to help with any questions or issues you may have.');
+  addBotMessage('Please provide clear and accurate information so we can assist you faster.');
+  addBotMessage('We value your time and will do our best to respond quickly.');
+  addBotMessage('💬 Your message is being forwarded to one of our customer service representatives.');
+  addBotMessage('⌛ All our agents are currently busy. Please wait a moment — we’ll be with you shortly.');
+  addBotMessage('🤝 Thank you for your patience and for choosing Tech BD.');
   });
 
   closeChat.addEventListener('click', () => {
@@ -1637,25 +1654,18 @@ Because your business deserves uninterrupted support.
     const msg = chatInput.value.trim();
     if(msg === '') return;
 
-    // Show user message
     const userMsgDiv = document.createElement('div');
     userMsgDiv.style.textAlign = 'right';
     userMsgDiv.style.margin = '5px 0';
     userMsgDiv.textContent = 'You: ' + msg;
     chatMessages.appendChild(userMsgDiv);
 
-    // Simple bot reply simulation
-    const botMsgDiv = document.createElement('div');
-    botMsgDiv.style.textAlign = 'left';
-    botMsgDiv.style.margin = '5px 0';
-    botMsgDiv.textContent = 'Tech BD: Thanks for your message! We will get back to you soon.';
-    chatMessages.appendChild(botMsgDiv);
+    addBotMessage('Thanks for your message! We will get back to you soon.');
 
     chatInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
   });
 
-  // Send message on Enter key
   chatInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -1663,6 +1673,7 @@ Because your business deserves uninterrupted support.
     }
   });
 </script>
+  
   <button class="scroll-top" id="scrollTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
   </button>

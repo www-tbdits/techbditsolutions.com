@@ -286,11 +286,10 @@
   </style>
 </head>
 <body>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech BD Header</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome for headset icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <style>
@@ -316,7 +315,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -330,12 +329,18 @@
       margin-right: 15px;
     }
 
+    .nav-and-support {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+    }
+
     nav {
       display: flex;
       align-items: center;
       gap: 20px;
-      flex: 1;
-      justify-content: center;
+      background: transparent;
     }
 
     nav a {
@@ -360,7 +365,7 @@
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
-      white-space: nowrap;
+      margin-left: 30px;
     }
 
     .customer-service i {
@@ -374,14 +379,20 @@
         gap: 10px;
       }
 
+      .nav-and-support {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+      }
+
       nav {
         flex-wrap: wrap;
-        justify-content: flex-start;
       }
 
       .customer-service {
-        align-self: flex-end;
-        margin-top: 10px;
+        justify-content: flex-start;
+        margin-left: 0;
       }
     }
   </style>
@@ -394,20 +405,22 @@
         <img src="images/TB.png" alt="Tech BD IT Solutions Logo">
       </div>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#workwithus">Work With Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="nav-and-support">
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#workwithus">Work With Us</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-      <div class="customer-service" onclick="openWhatsApp()">
-        <i class="fas fa-headset"></i>
-        <span>24/7 Support</span>
+        <div class="customer-service" onclick="openWhatsApp()">
+          <i class="fas fa-headset"></i>
+          <span>24/7 Support</span>
+        </div>
       </div>
     </div>
   </header>
@@ -420,6 +433,7 @@
 
 </body>
 </html>
+  
 <section id="home" style="padding: 18px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
   <p class="subtext">Trust in Our Experience</p>
@@ -1869,6 +1883,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

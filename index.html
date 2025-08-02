@@ -287,10 +287,10 @@
 </head>
 <body>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech BD Header</title>
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome for headset icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <style>
@@ -307,7 +307,7 @@
     }
 
     header {
-      background: #002856; /* তোমার দেওয়া হেডার কালার */
+      background: #002856;
       color: #fff;
       padding: 15px 25px;
     }
@@ -322,19 +322,26 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 15px;
     }
 
     .logo img {
       height: 60px;
       border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    .nav-and-support {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
     }
 
     nav {
       display: flex;
       align-items: center;
       gap: 20px;
-      flex-wrap: wrap;
+      background: transparent;
     }
 
     nav a {
@@ -342,11 +349,13 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
-      transition: 0.3s;
+      padding: 6px 10px;
+      transition: background-color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: #003875;
+      border-radius: 4px;
     }
 
     .customer-service {
@@ -357,6 +366,7 @@
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
+      margin-left: 30px;
     }
 
     .customer-service i {
@@ -370,13 +380,20 @@
         gap: 10px;
       }
 
+      .nav-and-support {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+      }
+
       nav {
-        justify-content: flex-start;
         flex-wrap: wrap;
       }
 
       .customer-service {
         justify-content: flex-start;
+        margin-left: 0;
       }
     }
   </style>
@@ -389,20 +406,22 @@
         <img src="images/TB.png" alt="Tech BD IT Solutions Logo">
       </div>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#workwithus">Work With Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="nav-and-support">
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#workwithus">Work With Us</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-      <div class="customer-service" onclick="openWhatsApp()">
-        <i class="fas fa-headset"></i>
-        <span>24/7 Support</span>
+        <div class="customer-service" onclick="openWhatsApp()">
+          <i class="fas fa-headset"></i>
+          <span>24/7 Support</span>
+        </div>
       </div>
     </div>
   </header>
@@ -1864,6 +1883,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

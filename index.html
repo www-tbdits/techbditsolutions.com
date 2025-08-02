@@ -287,9 +287,94 @@
 </head>
 <body>
 
- <header>
-    <div class="logo-title" style="display: flex; align-items: center; justify-content: space-between;">
-      <img src="images/TB.png" alt="Tech BD IT Solutions Logo" style="height: 75px;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header Example</title>
+
+  <!-- Font Awesome for headset icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004aad;
+      padding: 10px 20px;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-title img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 10px;
+      transition: background-color 0.3s;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #003380;
+    }
+
+    .customer-service {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffd700;
+      font-weight: 700;
+      font-size: 1rem;
+      background-color: transparent; /* because header has background */
+      cursor: pointer;
+    }
+
+    .customer-service i {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 992px) {
+      .logo-title {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .customer-service {
+        justify-content: center;
+        width: 100%;
+        padding-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="images/TB.png" alt="Tech BD IT Solutions Logo">
+
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -300,27 +385,23 @@
         <a href="#workwithus">Work With Us</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
 
-  <div class="customer-service" onclick="openWhatsApp()">
-    <i class="fas fa-headset"></i>
-    <span>24/7 Support</span>
-  </div>
+      <div class="customer-service" onclick="openWhatsApp()">
+        <i class="fas fa-headset"></i>
+        <span>24/7 Support</span>
+      </div>
+    </div>
+  </header>
+
   <script>
     function openWhatsApp() {
       const url = "https://wa.me/8801323056735";
       window.open(url, "_blank");
     }
-
-    function performSearch() {
-      const query = document.getElementById('searchInput').value.trim();
-      alert("You searched for: " + query); // You can replace this with actual search logic
-    }
   </script>
 
 </body>
 </html>
- <header>
 <section id="home" style="padding: 18px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
   <p class="subtext">Trust in Our Experience</p>
@@ -1770,6 +1851,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

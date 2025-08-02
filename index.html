@@ -288,50 +288,65 @@
 <body>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Header Example</title>
+  <title>Tech BD Header</title>
 
-  <!-- Font Awesome for headset icon -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f2f4f8;
+      color: #333;
     }
 
     header {
-      background-color: #004aad;
-      padding: 10px 20px;
+      background: #002856; /* তোমার দেওয়া হেডার কালার */
+      color: #fff;
+      padding: 15px 25px;
     }
 
-    .logo-title {
+    .header-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    .logo-title img {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
       height: 60px;
+      border-radius: 5px;
     }
 
     nav {
       display: flex;
+      align-items: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1rem;
-      padding: 6px 10px;
-      transition: background-color 0.3s;
-      border-radius: 4px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      background-color: #003380;
+      text-decoration: underline;
     }
 
     .customer-service {
@@ -341,7 +356,6 @@
       color: #ffd700;
       font-weight: 700;
       font-size: 1rem;
-      background-color: transparent; /* because header has background */
       cursor: pointer;
     }
 
@@ -350,21 +364,19 @@
     }
 
     @media (max-width: 992px) {
-      .logo-title {
-        flex-wrap: wrap;
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
       }
 
       nav {
+        justify-content: flex-start;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
       }
 
       .customer-service {
-        justify-content: center;
-        width: 100%;
-        padding-top: 10px;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -372,8 +384,10 @@
 <body>
 
   <header>
-    <div class="logo-title">
-      <img src="images/TB.png" alt="Tech BD IT Solutions Logo">
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/TB.png" alt="Tech BD IT Solutions Logo">
+      </div>
 
       <nav>
         <a href="#home">Home</a>
@@ -395,8 +409,7 @@
 
   <script>
     function openWhatsApp() {
-      const url = "https://wa.me/8801323056735";
-      window.open(url, "_blank");
+      window.open("https://wa.me/8801323056735", "_blank");
     }
   </script>
 
@@ -1851,6 +1864,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

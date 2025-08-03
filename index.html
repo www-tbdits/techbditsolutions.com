@@ -443,7 +443,9 @@
       font-size: 18px;
       color: red; /* চাইলে রঙ পাল্টাও */
     }
-
+marquee.style.animationName = 'marquee';
+      marquee.style.animationDuration = `${duration}s`;
+    });
     @keyframes marquee {
       0%   { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
@@ -1906,6 +1908,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

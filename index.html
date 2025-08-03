@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TECH BD IT SOLUTIONS</title>
+  <title>Tech BD IT Solutions </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
@@ -433,15 +433,24 @@
 
 </body>
   
- <title>Running Notice Inside Section</title>
+  <title>Running Notice Inside Section</title>
   <style>
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
     .marquee-text {
       display: inline-block;
       white-space: nowrap;
-      animation: marquee 60s linear infinite; /* ← 60 সেকেন্ডে একবার স্ক্রল */
       font-weight: bold;
       font-size: 18px;
-      color: red; /* চাইলে রঙ পাল্টাও */
+      color: red;
+      will-change: transform;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
 
     @keyframes marquee {
@@ -452,12 +461,29 @@
 </head>
 <body>
 
-  <!-- আগের মতোই রাখা হয়েছে -->
-  <div style="overflow: hidden; white-space: nowrap;">
-    <div class="marquee-text">
-      🔔 আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন! আমরা দিচ্ছি 💬 ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে! আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে থাকুন আমাদের সঙ্গেই।
+  <div class="marquee-container">
+    <div class="marquee-text" id="marquee">
+      🔔 আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন! আমরা দিচ্ছি 💬 ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে! আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন।
     </div>
   </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const marquee = document.getElementById('marquee');
+      const containerWidth = marquee.parentElement.offsetWidth;
+      const textWidth = marquee.offsetWidth;
+
+      // calculate duration dynamically based on text length
+      const speed = 100; // pixels per second (change as needed)
+      const duration = (textWidth + containerWidth) / speed;
+
+      marquee.style.animationName = 'marquee';
+      marquee.style.animationDuration = `${duration}s`;
+    });
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
@@ -1911,6 +1937,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

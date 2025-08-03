@@ -435,35 +435,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Running Notice</title>
+  <title>Running Notice Inside Section</title>
   <style>
-    .marquee-container {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #ffcc00;
-      color: black;
-      padding: 10px 0;
-      z-index: 1000;
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
       font-weight: bold;
+      font-size: 18px;
+      color: red; /* চাইলে রঙ পাল্টাতে পারো */
     }
 
-    body {
-      margin: 0;
-      padding-top: 50px; /* notice bar এর জায়গা রাখতে */
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
   </style>
 </head>
 <body>
 
-<div class="marquee-container">
-  <marquee behavior="scroll" direction="left">
-    🚨 গুরুত্বপূর্ণ ঘোষণা: আমাদের ওয়েবসাইটে নতুন আপডেট এসেছে! অফার দেখতে ভিজিট করুন আমাদের অফার পেজ!
-  </marquee>
-</div>
-
 <section id="home" style="padding: 18px 20px; text-align: center;">
-  <!-- তোমার ওয়েবসাইটের মূল কনটেন্ট -->
+  <!-- চলমান নোটিশ -->
+  <div style="overflow: hidden; white-space: nowrap;">
+    <div class="marquee-text">
+      🔔 চলমান ঘোষণা: আমাদের ওয়েবসাইটে নতুন অফার চলছে! বিস্তারিত জানতে এখনই ক্লিক করুন!
+    </div>
+  </div>
+
+  <!-- ওয়েবসাইটের অন্যান্য কনটেন্ট -->
   <h1>Welcome to My Website</h1>
   <p>এখানে তোমার অন্যান্য কনটেন্ট থাকবে।</p>
 </section>
@@ -471,7 +470,6 @@
 </body>
 </html>
 
-  
 <section id="home" style="padding: 18px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
   <p class="subtext">Trust in Our Experience</p>
@@ -1921,6 +1919,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

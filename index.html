@@ -432,36 +432,36 @@
   </script>
 
 </body>
-  <title>Running Notice Inside Section</title>
+  
+ <title>Running Notice Inside Section</title>
   <style>
     .marquee-text {
       display: inline-block;
       white-space: nowrap;
-      animation: marquee 0s linear forwards;
+      animation: marquee 60s linear infinite; /* ← 60 সেকেন্ডে একবার স্ক্রল */
       font-weight: bold;
       font-size: 18px;
-      color: red;
+      color: red; /* চাইলে রঙ পাল্টাও */
     }
 
     @keyframes marquee {
       0%   { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
-
-    /* এটি JavaScript ছাড়াই অটো শুরু করাবে */
-    .marquee-text {
-      animation: marquee 60s linear infinite; /* সময় চাইলে কমাও */
-    }
   </style>
 </head>
 <body>
 
-  <!-- আগের মতোই simple layout -->
+  <!-- আগের মতোই রাখা হয়েছে -->
   <div style="overflow: hidden; white-space: nowrap;">
     <div class="marquee-text">
       🔔 আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন! আমরা দিচ্ছি 💬 ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে! আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে থাকুন আমাদের সঙ্গেই।
     </div>
   </div>
+
+</body>
+</html>
+  
 <section id="home" style="padding: 18px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
   <p class="subtext">Trust in Our Experience</p>
@@ -1911,6 +1911,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

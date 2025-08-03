@@ -428,22 +428,23 @@
   <script>
     function openWhatsApp() {
       window.open("https://wa.me/8801323056735", "_blank");
-    }
+      {
   </script>
 
 </body>
   
-  <title>Running Notice Inside Section</title>
+ <title>Running Notice Inside Section</title>
   <style>
     .marquee-container {
       width: 100%;
       overflow: hidden;
       white-space: nowrap;
       box-sizing: border-box;
+      position: relative;
     }
 
     .marquee-text {
-      display: inline-block;
+      position: absolute;
       white-space: nowrap;
       font-weight: bold;
       font-size: 18px;
@@ -461,7 +462,7 @@
 </head>
 <body>
 
-  <div class="marquee-container">
+  <div class="marquee-container" id="container">
     <div class="marquee-text" id="marquee">🔔 আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন! আমরা দিচ্ছি 💬 ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে! আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন।
     </div>
   </div>
@@ -469,24 +470,26 @@
   <script>
     window.addEventListener('load', () => {
       const marquee = document.getElementById('marquee');
-      const containerWidth = marquee.parentElement.offsetWidth;
+      const container = document.getElementById('container');
+      const containerWidth = container.offsetWidth;
       const textWidth = marquee.offsetWidth;
 
-      // calculate duration dynamically based on text length
-      const speed = 100; // pixels per second (change as needed)
-      const duration = (textWidth + containerWidth) / speed;
+      // আমরা এক্সাক্ট ডিউরেশন বের করি যেন 100px/sec স্পিডে চলে
+      const speed = 100; // pixels per second
+      const totalDistance = containerWidth + textWidth;
+      const duration = totalDistance / speed;
 
+      // স্টার্ট পজিশন: ডান প্রান্তে
+      marquee.style.left = containerWidth + 'px';
+
+      // অ্যানিমেশন সেট
       marquee.style.animationName = 'marquee';
       marquee.style.animationDuration = `${duration}s`;
     });
   </script>
 
 </body>
-</html>
-
-</body>
-</html>
-  
+</html> 
 <section id="home" style="padding: 18px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
   <p class="subtext">Trust in Our Experience</p>
@@ -1936,6 +1939,7 @@ Because your business deserves uninterrupted support.
 </footer>
 
  
+
 
 
 

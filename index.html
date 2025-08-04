@@ -433,7 +433,31 @@
   </script>
 
 </body>
+   <title>Running Notice Inside Section</title>
+  <style>
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 50s linear infinite; /* ← 50 সেকেন্ডে একবার স্ক্রল */
+      font-weight: bold;
+      font-size: 18px;
+      color: red; /* চাইলে রঙ পাল্টাও */
+    }
 
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div style="overflow: hidden; white-space: nowrap;">
+    <div class="marquee-text">"আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন!আমরা দিচ্ছি  ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে!
+    আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। 
+    বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন । 
+    </div>
+  </div>     
 
 <section id="home" style="padding: 18px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
@@ -546,10 +570,7 @@
     <button class="btn clear-btn" onclick="clearSearch()">❌</button>
     <button class="btn search-btn" onclick="searchFunction()">🔍</button>
   </div>
-<div class="full-width-image">
-    <img src="images/photo3.jpg" alt="Tech Support Collage" />
-  </div>
-</section>
+  
   <script>
     function searchFunction() {
       const input = document.getElementById("searchInput").value.toLowerCase();
@@ -587,35 +608,12 @@
 
 </body>
 </html>
-
 </section>
+<div class="full-width-image">
+    <img src="images/photo3.jpg" alt="Tech Support Collage" />
+  </div>
 
-   <title>Running Notice Inside Section</title>
-  <style>
-    .marquee-text {
-      display: inline-block;
-      white-space: nowrap;
-      animation: marquee 50s linear infinite; /* ← 50 সেকেন্ডে একবার স্ক্রল */
-      font-weight: bold;
-      font-size: 18px;
-      color: red; /* চাইলে রঙ পাল্টাও */
-    }
 
-    @keyframes marquee {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-  </style>
-</head>
-<body>
-
-  <div style="overflow: hidden; white-space: nowrap;">
-    <div class="marquee-text">"আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন!আমরা দিচ্ছি  ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে!
-    আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। 
-    বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন । 
-    </div>
-  </div>     
-        
 <section id="products">
   <h2 class="section-title">Featured Categories</h2>
   <div class="featured-category">
@@ -1911,5 +1909,6 @@ Because your business deserves uninterrupted support.
     </p>
   </script>
 </footer>
+
 
 

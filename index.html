@@ -434,31 +434,38 @@
 
 </body>
 
+<section id="home" style="padding: 18px 20px; text-align: center;">
+  <h2 class="headline">Your Team, Our Tech Support</h2>
+  <p class="subtext">Trust in Our Experience</p>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>এক পাতার সাপোর্ট পেইজ</title>
+  <title>বড় সার্চ বার সহ Responsive Search</title>
   <style>
-    /* সার্চ বার ও কার্ড স্টাইল (আগের মতোই) */
     .search-wrapper {
       position: relative;
-      max-width: 600px;
+      max-width: 600px;   /* বড় করা হলো */
       width: 95%;
       margin: 20px auto;
     }
+
+    /* সার্চ ইনপুট ফিল্ড */
     #searchInput {
       width: 100%;
-      padding: 15px 110px 15px 20px;
-      font-size: 18px;
+     padding: 15px 110px 15px 20px;/* ডান পাশের বাটনের জন্য জায়গা */
+      font-size: 18px;               /* বড় ফন্ট সাইজ */
       border: 2px solid #ccc;
       border-radius: 8px;
       box-sizing: border-box;
       outline: none;
       transition: border-color 0.3s ease;
-      height: 50px;
+      height: 50px;                  /* ইনপুটের উচ্চতা বাড়ানো */
     }
+
     #searchInput:focus {
       border-color: #007BFF;
     }
+
+    /* ইনপুটের ভিতরের বাটনগুলোর জন্য স্টাইল */
     .btn {
       position: absolute;
       top: 50%;
@@ -466,24 +473,38 @@
       background-color: #f0f0f0;
       border: 2px solid #ccc;
       border-radius: 5px;
-      width: 40px;
+      width: 40px;                   /* বড় বাটন */
       height: 40px;
       cursor: pointer;
-      font-size: 22px;
+      font-size: 22px;              /* বড় আইকন */
       line-height: 40px;
       text-align: center;
       padding: 0;
       user-select: none;
       transition: background-color 0.3s ease;
     }
+
     .btn:hover {
       background-color: #ddd;
     }
-    .clear-btn { right: 50px; }
-    .search-btn { right: 5px; }
 
+    /* ক্লিয়ার বাটনের অবস্থান */
+    .clear-btn {
+      right: 50px;                  /* ডান থেকে ৫০px দূরে */
+      border-left: none;
+    }
+
+    /* সার্চ বাটনের অবস্থান */
+    .search-btn {
+      right: 5px;                   /* ডান থেকে ৫px দূরে */
+      border-left: none;
+    }
+
+    /* মোবাইলের জন্য রেস্পন্সিভ */
     @media (max-width: 480px) {
-      .search-wrapper { max-width: 100%; }
+      .search-wrapper {
+        max-width: 100%;
+      }
       #searchInput {
         font-size: 16px;
         padding: 12px 90px 12px 15px;
@@ -495,9 +516,15 @@
         font-size: 18px;
         line-height: 35px;
       }
-      .clear-btn { right: 45px; }
+      .clear-btn {
+        right: 45px;
+      }
+      .search-btn {
+        right: 5px;
+      }
     }
 
+    /* নমুনা কার্ড স্টাইল */
     .card {
       max-width: 600px;
       width: 95%;
@@ -509,149 +536,310 @@
       box-sizing: border-box;
       font-size: 16px;
     }
+  </style>
+</head>
+<body>
 
-    /* স্ক্রলিং টেক্সট */
+  <div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="Type to search" />
+    <button class="btn clear-btn" onclick="clearSearch()">❌</button>
+    <button class="btn search-btn" onclick="searchFunction()">🔍</button>
+  </div>
+
+  <script>
+    function searchFunction() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      let found = false;
+
+      cards.forEach(card => {
+        if (card.innerText.toLowerCase().includes(input)) {
+          card.style.display = "block";
+          found = true;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      if (!found && input !== "") {
+        alert("Sorry! No results found.");
+      }
+    }
+
+    function clearSearch() {
+      const input = document.getElementById("searchInput");
+      input.value = "";
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(card => card.style.display = "block");
+      input.focus();
+    }
+
+    document.getElementById("searchInput").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        searchFunction();
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+</section>
+
+   <title>Running Notice Inside Section</title>
+  <style>
     .marquee-text {
       display: inline-block;
       white-space: nowrap;
-      animation: marquee 50s linear infinite;
+      animation: marquee 50s linear infinite; /* ← 50 সেকেন্ডে একবার স্ক্রল */
       font-weight: bold;
       font-size: 18px;
-      color: red;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+      color: red; /* চাইলে রঙ পাল্টাও */
     }
 
-    /* প্রোডাক্ট কার্ড ও ক্যাটাগরি */
-    #products .section-title {
-      text-align: left;
-      font-size: 1rem;
-      color: #004aad;
-      margin-bottom: 15px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 4px;
-      max-width: fit-content;
-    }
-    #products .section-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 30px;
-      background-color: #004aad;
-      border-radius: 2px;
-    }
-    .featured-category {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 0.3px;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-    .featured-category .card {
-      background: #fff;
-      padding: 5px;
-      border-radius: 20px;
-      box-shadow: 0 3px 0 2px rgba(0,0,0,0.03);
-      border-left: 5px solid #004aad;
-      text-align: center;
-      cursor: default;
-      box-sizing: border-box;
-      max-width: 60%;
-      margin: 0 auto;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .featured-category .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
-    }
-    .featured-category .card i {
-      font-size: 1.3rem;
-      color: #004aad;
-      margin-bottom: 6px;
-    }
-    .featured-category .card p {
-      font-size: 0.8rem;
-      color: #333;
-      font-weight: 600;
-      margin: 0;
-      line-height: 1.2;
-      word-wrap: break-word;
-    }
-    @media (max-width: 992px) {
-      .featured-category {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 600px) {
-      .featured-category {
-        grid-template-columns: 1fr;
-        padding: 0 3px;
-      }
-      #products .section-title {
-        font-size: 0.7rem;
-        margin-bottom: 5px;
-      }
-      .featured-category .card {
-        padding: 5px 3px;
-      }
-      .featured-category .card i {
-        font-size: .7rem;
-        margin-bottom: 5px;
-      }
-      .featured-category .card p {
-        font-size: 0.7rem;
-      }
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
   </style>
 </head>
 <body>
 
-  <!-- হেডলাইন -->
-  <section id="home" style="padding: 18px 20px; text-align: center;">
-    <h2 class="headline">Your Team, Our Tech Support</h2>
-    <p class="subtext">Trust in Our Experience</p>
-
-    <!-- সার্চ বার -->
-    <div class="search-wrapper">
-      <input type="text" id="searchInput" placeholder="Type to search" />
-      <button class="btn clear-btn" onclick="clearSearch()">❌</button>
-      <button class="btn search-btn" onclick="searchFunction()">🔍</button>
-    </div>
-  </section>
-
-  <!-- স্ক্রলিং নোটিশ -->
+  <!-- আগের মতোই রাখা হয়েছে -->
   <div style="overflow: hidden; white-space: nowrap;">
-    <div class="marquee-text">
-      আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন!
-      আমরা দিচ্ছি ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে!
-      আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন।
-      আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত।
-      বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন।
+    <div class="marquee-text">"আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন!আমরা দিচ্ছি  ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে!
+    আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। 
+    বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন । 
     </div>
+  </div>  
+
+</body>
+</html>
+<section id="products">
+  <h2 class="section-title">Featured Categories</h2>
+  <div class="featured-category">
+    <div class="card">
+      <i class="fas fa-server"></i>
+      <p>Networking Server</p>
+    </div>
+  <div class="card">
+  <i class="fas fa-network-wired"></i>
+  <p>Routers, Switches, Modems, Load Balancer, Router</p>
+</div>
+    <div class="card">
+ <i class="fas fa-video-camera"></i>
+      <p>CCTV / IP Cameras, DVR, NVR, XVR</p>
+    </div>
+    <div class="card">
+     <i class="fas fa-lock"></i><i class="fas fa-fingerprint"></i> 
+      <p>Access Control System</p>
+    </div>
+    <div class="card">
+  <i class="fas fa-phone"></i>
+  <p>IP Phone / PBX System</p>
+</div>
+    <div class="card">
+      <i class="fab fa-windows"></i>
+      <p>Windows Administrator</p>
+    </div>
+  <div class="card">
+      <i class="fab fa-windows"></i>
+      <p>Windows License</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-laptop"></i>
+      <p>Laptops</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-computer"></i>
+      <p>Desktops PC & All-in-One PCs</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-tablet-alt"></i>
+      <p>Tablets, Smartphones & Smartwatches</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-microchip"></i>
+      <p>CPU, RAM, Graphics Card, Cooling Fan</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-hdd"></i>
+      <p>HDD, SSD, M.2, USB, Tape Backup, MicroSD</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-desktop"></i>
+      <p>Monitor, Keyboard, Mouse, Webcam, Projector</p>
+    </div>
+<div class="card">
+  <i class="fas fa-camera"></i>
+  <p>Drone, Action Camera</p>
+</div>
+  <div class="card">
+  <i class="fas fa-receipt"></i>
+  <p>POS Printer</p>
+</div>
+<div class="card">
+      <i class="fas fa-print"></i>
+      <p>Laser Printer</p>
+    </div>
+   <div class="card">
+  <i class="fas fa-print"></i>
+  <p>All-in-One Printer</p>
+</div>
+  <div class="card">
+  <i class="fas fa-file-image"></i> 
+  <p>Scanner Devices</p>
+</div>
+    <div class="card">
+      <i class="fas fa-cash-register"></i>
+      <p>POS Devices</p>
+    </div>
+    <div class="card">
+  <i class="fas fa-video"></i> <!-- অথবা fa-video-camera -->
+  <p>Projector</p>
+</div>
+    <div class="card">
+      <i class="fas fa-code-branch"></i>
+      <p>Web Development</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-paint-brush"></i>
+      <p>Graphic Design</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-search"></i>
+      <p>SEO Services</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bullhorn"></i>
+      <p>Digital Marketing</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-cloud"></i>
+      <p>OS, Antivirus, Cloud, Hosting, SDK, API Key</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <p>Electrical</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <p>Generator</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-UPS"></i>
+      <p>IPS / UPS, Online UPS</p>
+    </div>
+  <div class="card">
+  <i class="fas fa-plug"></i>
+  <p>Surge Protector, Docking Station</p>
+</div>
+    <div class="card">
+      <i class="fas fa-ellipsis-h"></i>
+      <p>Other Services</p>
+    </div>
+
   </div>
+</section>
 
-  <!-- পণ্যের তালিকা -->
-  <section id="products">
-    <h2 class="section-title">Featured Categories</h2>
-    <div class="featured-category">
-      <div class="card"><i class="fas fa-server"></i><p>Networking Server</p></div>
-      <div class="card"><i class="fas fa-network-wired"></i><p>Routers, Switches, Modems</p></div>
-      <div class="card"><i class="fas fa-video-camera"></i><p>CCTV / IP Cameras</p></div>
-      <div class="card"><i class="fas fa-lock"></i><i class="fas fa-fingerprint"></i><p>Access Control</p></div>
-      <div class="card"><i class="fas fa-phone"></i><p>IP Phone / PBX System</p></div>
-      <div class="card"><i class="fab fa-windows"></i><p>Windows License</p></div>
-      <div class="card"><i class="fas fa-laptop"></i><p>Laptops</p></div>
-      <div class="card"><i class="fas fa-computer"></i><p>Desktops & All-in-One</p></div>
-      <div class="card"><i class="fas fa-tablet-alt"></i><p>Tablets & Smart Devices</p></div>
-      <div class
+<style>
+#products {
+  #products .section-title {
+    text-align: left;
+    font-size: 1rem;
+    color: #004aad;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 4px;
+    max-width: fit-content;
+  }
+  #products .section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 30px;
+    background-color: #004aad;
+    border-radius: 2px;
+  }
 
+  .featured-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;  /* কার্ডের মাঝে ফাঁক কম */
+    padding: 0.3px; /* ডান-বাম থেকে গরিডের প্যাডিং কমালো */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
+  /* কার্ড ডিজাইন */
+  .card {
+    background: #fff;
+    padding: 5px 5px; /* ডান-বাম থেকে প্যাডিং কমিয়ে একটু ঘেঁষা লাগবে */
+    border-radius: 20px;
+    box-shadow: 0 3px 0 2px rgba(0,0,0,0.03);
+    border-left: 5px solid #004aad;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    max-width: 60%;
+    margin: 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  }
+
+  .card i {
+    font-size: 1.3rem;
+    color: #004aad;
+    margin-bottom: 6px;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  @media (max-width: 992px) {
+    .featured-category {
+      grid-template-columns: repeat(2, 1fr); /* ট্যাবলেট-এ ২ কলাম */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .featured-category {
+      grid-template-columns: 1fr; /* মোবাইলে ১ কলাম */
+      padding: 0 3px;
+    }
+
+    #products .section-title {
+      font-size: 0.7rem;
+      margin-bottom: 5px;
+    }
+
+    .card {
+      padding: 5px 3px;
+    }
+
+    .card i {
+      font-size: .7rem;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 0.7rem;
+    }
+  }
+</style>
+        
 <section id="services">
   <h2 class="section-title">Our Services</h2>
   <div class="services-grid">
@@ -1715,6 +1903,7 @@ Because your business deserves uninterrupted support.
     </p>
   </script>
 </footer>
+
 
 
 

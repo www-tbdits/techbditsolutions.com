@@ -1,118 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech BD IT Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="images/FV.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f2f4f8;
+      color: #333;
     }
 
     header {
-      background-color: #f4f4f4;
-      border-bottom: 1px solid #ddd;
-      padding: 10px 20px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .header-container {
+      background: #002856;
+      color: #fff;
+      padding: 15px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
+      position: relative;
     }
 
-    .logo {
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex: 1;
-      text-align: left;
     }
 
-    .logo img {
-      height: 40px;
+    .logo-title img {
+      height: 50px;
+      width: auto;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    .logo-title h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    .logo-title p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+
+    .customer-service {
+      cursor: pointer;
+      color: #fff;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
 
     .menu-toggle {
       display: none;
-      font-size: 24px;
+      font-size: 22px;
       cursor: pointer;
+      color: #fff;
     }
 
-    nav#mainNav {
+    nav {
+      background: #004aad;
       display: flex;
-      gap: 15px;
-      flex: 2;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px 20px;
+      transition: all 0.3s ease;
     }
 
-    nav#mainNav a {
+    nav a {
+      color: white;
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      padding: 8px 10px;
-      transition: background 0.3s;
+      font-weight: 500;
+      transition: 0.3s;
     }
 
-    nav#mainNav a:hover {
-      background-color: #ddd;
-      border-radius: 4px;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    .customer-service {
-      flex: 1;
-      text-align: right;
-      cursor: pointer;
-    }
-
-    .customer-service i {
-      margin-right: 5px;
-    }
-
-    /* Responsive (Mobile) */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+      }
+
       .menu-toggle {
         display: block;
         order: 1;
       }
 
-      .logo {
+      .logo-title {
         order: 2;
-        text-align: center;
+        flex: 1;
+        justify-content: center;
       }
 
       .customer-service {
         order: 3;
-        text-align: right;
       }
 
-      nav#mainNav {
-        display: none;
+      nav {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        display: none;
         width: 100%;
-        background-color: #f4f4f4;
-        padding: 10px 0;
-        border-top: 1px solid #ddd;
-      }
-
-      nav#mainNav.active {
-        display: flex;
-      }
-
-      nav#mainNav a {
-        padding: 10px 20px;
         text-align: center;
       }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    /* Other existing styles (unchanged) */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 40px 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #004aad;
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #e6f0ff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .featured-category {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .featured-category .card {
+      flex: 1 1 200px;
+      background: #fff7e6;
+      border: 1px solid #ffe4b5;
+      font-weight: normal;
+      font-size: 0.95rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #003380;
+    }
+    footer {
+      background: #002856;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #004aad;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 90px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp:hover {
+      background-color: #1ebe57;
     }
   </style>
 </head>
@@ -120,40 +240,35 @@
 
   <!-- Header -->
   <header>
-    <div class="header-container">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
 
-      <!-- Hamburger Menu Icon -->
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
+    <div class="logo-title">
+      <img src="images/TB.png" alt="Tech BD Logo" />
+      <div>
+        <h1>Tech BD IT Solutions</h1>
+        <p>Smart Tech, Smart Future</p>
       </div>
+    </div>
 
-      <!-- Logo -->
-      <div class="logo">
-        <a href=".">
-          <img src="images/TB.png" alt="Tech BD IT Solutions Logo" />
-        </a>
-      </div>
-
-      <!-- Customer Support -->
-      <div class="customer-service" onclick="openWhatsApp()">
-        <i class="fas fa-headset"></i>
-        <span>24/7 Support</span>
-      </div>
-
-      <!-- Nav Menu -->
-      <nav id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#workwithus">Work With Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
+    <div class="customer-service" onclick="openWhatsApp()">
+      <i class="fas fa-headset"></i>
+      <span>24/7 Support</span>
     </div>
   </header>
+
+  <!-- Nav Menu -->
+  <nav id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#workwithus">Work With Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <!-- JavaScript -->
   <script>
@@ -162,13 +277,12 @@
     }
 
     function openWhatsApp() {
-      window.open('https://wa.me/yourwhatsapplink', '_blank');
+      window.open('https://wa.me/8801XXXXXXXXX', '_blank'); // Replace with your number
     }
   </script>
 
 </body>
 </html>
- </script>
 
    <title>Running Notice Inside Section</title>
   <style>
@@ -1674,6 +1788,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

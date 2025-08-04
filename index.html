@@ -401,12 +401,15 @@
 <body>
 <header>
   <div class="header-container">
+    
+    <!-- Logo on the left -->
     <div class="logo">
       <a href=".">
         <img src="images/TB.png" alt="Tech BD IT Solutions Logo" />
       </a>
     </div>
 
+    <!-- Navigation in the center -->
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -418,45 +421,38 @@
       <a href="#contact">Contact</a>
     </nav>
 
+    <!-- Customer service on the right -->
     <div class="customer-service" onclick="openWhatsApp()" role="button" tabindex="0" aria-label="Open WhatsApp Support">
       <i class="fas fa-headset"></i>
       <span>24/7 Support</span>
     </div>
+
   </div>
 </header>
 
+<!-- STYLES -->
 <style>
-  /* Header container styling */
   .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px; /* Add some left and right padding */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #002856;
     flex-wrap: wrap;
-    gap: 15px;
   }
 
-  /* Logo bigger and aligned more left with padding */
-  .logo {
-    flex-shrink: 0;
-    padding-left: 10px; /* padding left to move it away from edge */
-  }
   .logo img {
-    height: 80px; /* bigger logo */
+    height: 75px;
     border-radius: 5px;
-    display: block;
   }
 
-  /* Navigation styling */
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    flex-grow: 1;
-    justify-content: center; /* center nav links */
-    min-width: 0;
+    justify-content: center;
+    gap: 12px;
+    flex: 1;
+    padding: 10px 20px;
   }
 
   nav a {
@@ -465,79 +461,60 @@
     font-weight: 500;
     font-size: 1rem;
     padding: 6px 10px;
+    transition: 0.3s;
     border-radius: 4px;
-    white-space: nowrap;
-    transition: background-color 0.3s;
   }
 
-  nav a:hover,
-  nav a:focus {
+  nav a:hover {
     background-color: #003875;
   }
 
-  /* Customer service inside header next to nav */
   .customer-service {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: #ffd700;
-    font-weight: 700;
-    font-size: 1rem;
+    gap: 6px;
     cursor: pointer;
     white-space: nowrap;
   }
 
   .customer-service i {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
-  /* Responsive adjustments */
+  /* RESPONSIVE DESIGN */
   @media (max-width: 992px) {
     .header-container {
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
+
     nav {
       justify-content: center;
-      gap: 10px;
-      order: 2; /* move nav below logo and support */
-      width: 100%;
+      padding: 10px 0;
     }
-    .customer-service {
-      margin-left: 0;
-      order: 3; /* keep it below nav */
-      width: 100%;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    .logo {
-      order: 1;
-      padding-left: 0;
-      flex-basis: 100%;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-  }
 
-  @media (max-width: 600px) {
-    nav a {
-      font-size: 0.9rem;
-      padding: 5px 8px;
-    }
     .customer-service {
-      font-size: 0.9rem;
-      gap: 5px;
+      margin-top: 10px;
+      justify-content: center;
     }
-    .customer-service i {
-      font-size: 1.1rem;
+
+    .logo {
+      margin-bottom: 10px;
     }
   }
 </style>
 
+<!-- JS for WhatsApp Click -->
 <script>
   function openWhatsApp() {
     window.open("https://wa.me/8801323056735", "_blank");
   }
 </script>
+
 
    <title>Running Notice Inside Section</title>
   <style>
@@ -2043,6 +2020,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

@@ -399,18 +399,24 @@
   </style>
 </head>
 <body>
+<!-- Header -->
 <header>
   <div class="header-container">
     
-    <!-- Logo on the left -->
+    <!-- Logo -->
     <div class="logo">
       <a href=".">
         <img src="images/TB.png" alt="Tech BD IT Solutions Logo" />
       </a>
     </div>
 
-    <!-- Navigation in the center -->
-    <nav>
+    <!-- Hamburger Menu Icon -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Nav Menu -->
+    <nav id="mainNav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#products">Products</a>
@@ -421,100 +427,14 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Customer service on the right -->
-    <div class="customer-service" onclick="openWhatsApp()" role="button" tabindex="0" aria-label="Open WhatsApp Support">
+    <!-- Customer Support -->
+    <div class="customer-service" onclick="openWhatsApp()">
       <i class="fas fa-headset"></i>
       <span>24/7 Support</span>
     </div>
 
   </div>
 </header>
-
-<!-- STYLES -->
-<style>
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #002856;
-    flex-wrap: wrap;
-  }
-
-  .logo img {
-    height: 75px;
-    border-radius: 5px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    flex: 1;
-    padding: 10px 20px;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 6px 10px;
-    transition: 0.3s;
-    border-radius: 4px;
-  }
-
-  nav a:hover {
-    background-color: #003875;
-  }
-
-  .customer-service {
-    color: #ffd700;
-    font-weight: bold;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  .customer-service i {
-    font-size: 1.4rem;
-  }
-
-  /* RESPONSIVE DESIGN */
-  @media (max-width: 992px) {
-    .header-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    nav {
-      justify-content: center;
-      padding: 10px 0;
-    }
-
-    .customer-service {
-      margin-top: 10px;
-      justify-content: center;
-    }
-
-    .logo {
-      margin-bottom: 10px;
-    }
-  }
-</style>
-
-<!-- JS for WhatsApp Click -->
-<script>
-  function openWhatsApp() {
-    window.open("https://wa.me/8801323056735", "_blank");
-  }
-</script>
-
 
    <title>Running Notice Inside Section</title>
   <style>
@@ -2020,6 +1940,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

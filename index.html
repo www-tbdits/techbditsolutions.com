@@ -1902,15 +1902,29 @@ Because your business deserves uninterrupted support.
 <!-- Payment Method Logos (Left Side) with "Pay with" text -->
 <div style="display: flex; align-items: center; gap: 10px; margin-top: 20px;">
   <span style="font-weight: 500; font-size: 14px; margin-right: 10px;">Pay with</span>
-  <img src="images/Nagod.png" alt="Nagad" style="height: 30px; width: 30px; border-radius: 50%;">
-  <img src="images/Bkash.jpg" alt="bKash" style="height: 30px; width: 30px; border-radius: 50%;">
-  <img src="images/DBBL.png" alt="DBBL" style="height: 30px; width: 30px; border-radius: 50%;">
-  <img src="images/BracBank.png" alt="Brac Bank" style="height: 30px; width: 30px; border-radius: 50%;">
+  <img src="images/Nagod.png" alt="Nagad" class="payment-logo">
+  <img src="images/Bkash.jpg" alt="bKash" class="payment-logo">
+  <img src="images/DBBL.png" alt="DBBL" class="payment-logo">
+  <img src="images/BracBank.png" alt="Brac Bank" class="payment-logo">
 </div>
 
+<style>
+  .payment-logo {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease;
+    /* Optional: cursor pointer */
+    cursor: pointer;
+  }
+
+  .payment-logo:hover {
+    transform: scale(1.2);
+  }
+</style>
    </script>
 
 </footer>
+
 
 
 

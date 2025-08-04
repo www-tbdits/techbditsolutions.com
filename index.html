@@ -399,42 +399,146 @@
   </style>
 </head>
 <body>
-<!-- Header -->
 <header>
   <div class="header-container">
-    
-    <!-- Logo -->
+    <!-- Hamburger Icon (visible only on mobile) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Logo (center on mobile, left on desktop) -->
     <div class="logo">
       <a href=".">
         <img src="images/TB.png" alt="Tech BD IT Solutions Logo" />
       </a>
     </div>
 
-    <!-- Hamburger Menu Icon -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-
-    <!-- Nav Menu -->
-    <nav id="mainNav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#workwithus">Work With Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Customer Support -->
+    <!-- 24/7 Support (always right) -->
     <div class="customer-service" onclick="openWhatsApp()">
       <i class="fas fa-headset"></i>
       <span>24/7 Support</span>
     </div>
-
   </div>
+
+  <!-- Navigation Menu -->
+  <nav id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#workwithus">Work With Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
+
+<style>
+  header {
+    background: #002856;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .logo img {
+    height: 65px;
+    border-radius: 6px;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+  }
+
+  nav a:hover {
+    background: #004aad;
+    border-radius: 4px;
+  }
+
+  .customer-service {
+    display: flex;
+    align-items: center;
+    color: #ffd700;
+    font-weight: 600;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .customer-service i {
+    font-size: 1.3rem;
+  }
+
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+    .header-container {
+      justify-content: space-between;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #003875;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      padding: 12px 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("show");
+  }
+
+  function openWhatsApp() {
+    window.open("https://wa.me/8801323056735", "_blank");
+  }
+</script>
 
    <title>Running Notice Inside Section</title>
   <style>
@@ -1940,6 +2044,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

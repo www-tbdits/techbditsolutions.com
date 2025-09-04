@@ -278,6 +278,7 @@
 </style>
 
 <!-- ✅ মোবাইল হেডার -->
+<!-- ✅ মোবাইল হেডার -->
 <header class="mobile-header">
   <div class="header-left">
     <span class="home-icon" onclick="location.reload()">🏠</span>
@@ -286,15 +287,23 @@
 
   <div class="header-center">
     <img src="images/TB.png" alt="Logo" class="logo-img">
-    <span class="account-icon">👤</span>
   </div>
 
-  <div class="header-right" onclick="openWhatsApp()">
-    <span class="support-icon">🎧</span> <!-- ✅ শুধু কাস্টমার সার্ভিস আইকন -->
+  <div class="header-right">
+    <span class="account-icon">👤</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Support" class="support-icon" onclick="openWhatsApp()" />
   </div>
 </header>
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* আইকনের মাঝে কিছু ফাঁকা জায়গা */
+}
 
-
+.account-icon, .support-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
 <!-- ✅ মোবাইল মেনু -->
 <nav id="mobileMenu" class="mobile-menu">
   <a href="#home">Home</a>
@@ -1945,6 +1954,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

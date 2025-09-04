@@ -277,6 +277,92 @@
   }
 </style>
 
+  <!-- হেডার -->
+<header class="mobile-header">
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- 3 লাইন হ্যামবারগার -->
+  <div class="logo">LOGO</div>
+  <div class="support">24/7 Support</div>
+</header>
+
+<!-- মোবাইল মেনু (ডিফল্ট লুকানো থাকবে) -->
+<nav id="mobileMenu" class="mobile-menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<style>
+  /* হেডার স্টাইল */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .support {
+    font-size: 14px;
+  }
+
+  /* মেনু */
+  .mobile-menu {
+    display: none;
+    background: #444;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+  }
+
+  .mobile-menu ul li a:hover {
+    background: #555;
+  }
+
+  /* মেনু শো করার সময় */
+  .mobile-menu.show {
+    display: block;
+  }
+
+  /* ডেস্কটপে এই হেডার লুকাবে */
+  @media (min-width: 768px) {
+    .mobile-header, .mobile-menu {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('show');
+  }
+</script>
+
   
    <title>Running Notice Inside Section</title>
   <style>
@@ -1794,6 +1880,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

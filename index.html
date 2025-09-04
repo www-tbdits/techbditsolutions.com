@@ -321,67 +321,17 @@
     }
 
     .support-icon {
-      width: 16px;         /* ✅ আরও ছোট করা হয়েছে */
-      height: 16px;
+      width: 20px;         /* ✅ আরও ছোট করা হয়েছে */
+      height: 20px;
       object-fit: contain;
-      border-radius: 50%;
+      border-radius: 60%;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-    /* ✅ মোবাইল হেডার */
-    .mobile-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 15px;
-      background-color: #f9f9f9;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-left,
-    .header-center,
-    .header-right {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-left {
-      gap: 10px;
-    }
-
-    .header-right {
-      gap: 10px;
-    }
-
-    .home-icon,
-    .menu-icon,
-    .account-icon {
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    .logo-img {
-      height: 30px;
-      cursor: pointer;
-    }
-
-    .support-icon {
-      width: 16px;         /* ✅ আরও ছোট করা হয়েছে */
-      height: 16px;
-      object-fit: contain;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
+    
   <!-- ✅ মোবাইল হেডার -->
   <header class="mobile-header">
     <div class="header-left">
@@ -398,12 +348,6 @@
       <img src="images/support.jpg" alt="Support" class="support-icon" onclick="openWhatsApp()" />
     </div>
   </header>
-
-  <!-- ✅ Running Notice Section -->
-  <section id="running-notice" style="padding: 100px 20px;">
-    <h1>📢 Running Notice Inside Section</h1>
-    <p>এখানে চলমান বিজ্ঞপ্তিগুলো থাকবে।</p>
-  </section>
 
   <!-- ✅ স্ক্রিপ্ট -->
   <script>
@@ -2080,6 +2024,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

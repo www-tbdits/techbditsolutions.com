@@ -420,17 +420,66 @@
           <a href="#contact">Contact</a>
         </nav>
 
-      <div class="customer-service" onclick="openWhatsApp()">
-      <i class="fas fa-headset"></i>
-      <span>24/7 Support</span>
-    </div>
-  </header>
+    <style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+  }
 
-  <script>
-    function openWhatsApp() {
-      window.open("https://wa.me/8801323056735", "_blank");
-    }
-  </script>
+  /* মেনুর বাকি অংশ যদি flexbox এ থাকে */
+  .menu {
+    display: flex;
+    gap: 15px;
+  }
+
+  .customer-service {
+    background-color: #25D366; /* WhatsApp গ্রীন */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid #1ebe57; /* একটু গাঢ় সবুজ বর্ডার */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .customer-service:hover {
+    background-color: #1ebe57;
+    box-shadow: 0 4px 10px rgba(30, 190, 87, 0.4);
+  }
+
+  .customer-service i {
+    font-size: 18px;
+  }
+</style>
+
+<header>
+  <div class="menu">
+    <!-- এখানে আপনার মেনুর অন্যান্য বাটন/লিংক থাকবে -->
+    <button>Home</button>
+    <button>About</button>
+    <button>Contact</button>
+  </div>
+
+  <div class="customer-service" onclick="openWhatsApp()">
+    <i class="fas fa-headset"></i>
+    <span>24/7 Support</span>
+  </div>
+</header>
+
+<script>
+  function openWhatsApp() {
+    window.open("https://wa.me/8801323056735", "_blank");
+  }
+</script>
 
 </body>
 
@@ -1949,5 +1998,6 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 

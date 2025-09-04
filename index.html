@@ -328,15 +328,66 @@
 </head>
 <body>
 
+    /* ✅ মোবাইল হেডার */
+    .mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      background-color: #f9f9f9;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left {
+      gap: 10px;
+    }
+
+    .header-right {
+      gap: 10px;
+    }
+
+    .home-icon,
+    .menu-icon,
+    .account-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .logo-img {
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .support-icon {
+      width: 16px;         /* ✅ আরও ছোট করা হয়েছে */
+      height: 16px;
+      object-fit: contain;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
   <!-- ✅ মোবাইল হেডার -->
   <header class="mobile-header">
     <div class="header-left">
-      <span class="home-icon" onclick="goToHome()">🏠</span>
+      <span class="home-icon" onclick="goToRunningNotice()">🏠</span>
       <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
     </div>
 
     <div class="header-center">
-      <img src="images/TB.png" alt="Logo" class="logo-img" onclick="goToHome()" />
+      <img src="images/TB.png" alt="Logo" class="logo-img" onclick="goToRunningNotice()" />
     </div>
 
     <div class="header-right">
@@ -345,32 +396,27 @@
     </div>
   </header>
 
-  <!-- ✅ হোম সেকশন -->
-  <section id="home" style="padding: 100px 20px;">
-    <h1>🏠 Home Section</h1>
-    <p>এখানে আপনার হোম কনটেন্ট থাকবে।</p>
+  <!-- ✅ Running Notice Section -->
+  <section id="running-notice" style="padding: 100px 20px;">
+    <h1>📢 Running Notice Inside Section</h1>
+    <p>এখানে চলমান বিজ্ঞপ্তিগুলো থাকবে।</p>
   </section>
 
   <!-- ✅ স্ক্রিপ্ট -->
   <script>
-    function goToHome() {
-      // হোম সেকশনে নিয়ে যাবে
-      window.location.href = "#home";
-      setTimeout(() => {
-        location.reload(); // রিফ্রেশ
-      }, 200);
+    // ✅ হোম / লোগো তে ক্লিক করলে: রিফ্রেশ সহ Running Notice সেকশনে যাবে
+    function goToRunningNotice() {
+      // পেজের URL পরিবর্তন করে anchor set করে
+      window.location.href = window.location.pathname + "#running-notice";
     }
 
+    // ✅ অ্যাকাউন্ট ক্লিক করলে: Login পেজে পাঠাবে
     function goToLogin() {
-      // Login পেজে নিয়ে যাবে
-      window.location.href = "login.html#home";
-      setTimeout(() => {
-        location.reload(); // রিফ্রেশ
-      }, 200);
+      window.location.href = "login.html"; // এখানে login পেজে user ID দিয়ে account খুলবে
     }
 
+    // ✅ WhatsApp ওপেন
     function openWhatsApp() {
-      // WhatsApp খুলবে
       window.open('https://wa.me/8801XXXXXXXXX', '_blank');
     }
 
@@ -2031,6 +2077,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

@@ -276,16 +276,18 @@
     text-transform: uppercase; /* Boro hater lekha */
   }
 </style>
+<!-- ✅ মোবাইল হেডার + মেনু + CSS + JS একসাথে -->
 
-  <!-- হেডার -->
 <!-- মোবাইল হেডার -->
 <header class="mobile-header">
-  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- ৩ লাইন -->
-  <div class="logo">LOGO</div>
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <div class="logo">
+    <img src="images/TB.png" alt="Logo" style="height: 40px;">
+  </div>
   <div class="support">24/7 Support</div>
 </header>
 
-<!-- মোবাইল মেনু -->
+<!-- মোবাইল মেনু (ডিফল্ট লুকানো) -->
 <nav id="mobileMenu" class="mobile-menu">
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -297,13 +299,14 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- CSS -->
 <style>
-  /* মোবাইল হেডার স্টাইল */
+  /* মোবাইল হেডার */
   .mobile-header {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #002856;
     color: white;
     padding: 10px 15px;
     position: fixed;
@@ -317,53 +320,64 @@
     cursor: pointer;
   }
 
-  .logo {
-    font-weight: bold;
-    font-size: 20px;
+  .logo img {
+    height: 40px;
   }
 
   .support {
     font-size: 14px;
+    font-weight: bold;
   }
 
-  /* মোবাইল মেনু স্টাইল */
+  /* মোবাইল মেনু */
   .mobile-menu {
     display: none;
     flex-direction: column;
-    background: #444;
+    background: #004aad;
     position: fixed;
-    top: 50px; /* হেডারের নিচে */
+    top: 50px;
     width: 100%;
-    left: 0;
     z-index: 999;
   }
 
   .mobile-menu a {
-    padding: 12px 20px;
     color: white;
+    padding: 12px 20px;
+    border-bottom: 1px solid #003380;
     text-decoration: none;
-    border-bottom: 1px solid #555;
-    display: block;
   }
 
   .mobile-menu a:hover {
-    background: #555;
+    background: #003380;
   }
 
-  /* মেনু শো করার সময় */
   .mobile-menu.show {
     display: flex;
   }
 
-  /* ডেস্কটপে মোবাইল হেডার ও মেনু লুকানো */
-  @media (min-width: 768px) {
+  /* মোবাইল স্ক্রিনে শুধু এটা দেখাবে */
+  @media (max-width: 768px) {
+    .mobile-header {
+      display: flex;
+    }
+
+    nav:not(.mobile-menu),
+    header:not(.mobile-header),
+    .customer-service {
+      display: none !important;
+    }
+  }
+
+  /* ডেক্সটপে এইগুলো লুকাবে */
+  @media (min-width: 769px) {
     .mobile-header,
     .mobile-menu {
-      display: none;
+      display: none !important;
     }
   }
 </style>
 
+<!-- JavaScript -->
 <script>
   function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
@@ -1889,6 +1903,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

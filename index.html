@@ -276,23 +276,24 @@
     text-transform: uppercase; /* Boro hater lekha */
   }
 </style>
+  
 <!-- ✅ মোবাইল হেডার -->
 <header class="mobile-header">
   <div class="header-left">
     <span class="home-icon" onclick="location.reload()">🏠</span>
     <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
   </div>
-
+  
+ <div class="header-right" onclick="openWhatsApp()">
+    <span class="support-icon">🎧</span> <!-- ✅ শুধু কাস্টমার সার্ভিস আইকন -->
+  </div>
+  
   <div class="header-center">
     <img src="images/TB.png" alt="Logo" class="logo-img">
     <span class="account-icon">👤</span>
   </div>
-
-  <div class="header-right" onclick="openWhatsApp()">
-    <span class="support-icon">🛎️</span>
-    <span class="support-text">24/7 Support</span>
-  </div>
 </header>
+
 
 <!-- ✅ মোবাইল মেনু -->
 <nav id="mobileMenu" class="mobile-menu">
@@ -1944,6 +1945,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

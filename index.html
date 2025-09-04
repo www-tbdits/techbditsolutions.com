@@ -410,6 +410,21 @@
   function openWhatsApp() {
     window.open("https://wa.me/8801323056735", "_blank");
   }
+
+  // ✅ সব মেনু লিংকে ক্লিক করলে মেনু হাইড হবে
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".mobile-menu a");
+    const menu = document.getElementById("mobileMenu");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        // Delay দিন যেন anchor scroll করার সময় দেখা যায়
+        setTimeout(() => {
+          menu.classList.remove("show");
+        }, 200);
+      });
+    });
+  });
 </script>
 
   
@@ -1929,6 +1944,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

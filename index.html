@@ -321,10 +321,10 @@
     }
 
     .support-icon {
-      width: 20px;         /* ✅ আরও ছোট করা হয়েছে */
-      height: 20px;
+      width: 10px;         /* ✅ আরও ছোট করা হয়েছে */
+      height: 10px;
       object-fit: contain;
-      border-radius: 60%;
+      border-radius: 100%;
       cursor: pointer;
     }
   </style>
@@ -335,12 +335,12 @@
   <!-- ✅ মোবাইল হেডার -->
   <header class="mobile-header">
     <div class="header-left">
-      <span class="home-icon" onclick="goToRunningNotice()">🏠</span>
+      <span class="home-icon" onclick="goToRunningNoticeInsideSection()">🏠</span>
       <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
     </div>
 
     <div class="header-center">
-      <img src="images/TB.png" alt="Logo" class="logo-img" onclick="goToRunningNotice()" />
+      <img src="images/TB.png" alt="Logo" class="logo-img" onclick="goToRunningNoticeInsideSection()" />
     </div>
 
     <div class="header-right">
@@ -352,7 +352,7 @@
   <!-- ✅ স্ক্রিপ্ট -->
   <script>
     // ✅ হোম / লোগো তে ক্লিক করলে: রিফ্রেশ সহ Running Notice সেকশনে যাবে
-    function goToRunningNotice() {
+    function goToRunningNoticeInsideSection() {
       // পেজের URL পরিবর্তন করে anchor set করে
       window.location.href = window.location.pathname + "#running-notice";
     }
@@ -2024,6 +2024,7 @@ Because your business deserves uninterrupted support.
 </div>
    </script>
 </footer>
+
 
 
 

@@ -194,28 +194,57 @@
   <a href="#testimonials">Testimonials</a>
  <a href="#work with us">Work With Us</a>
   <a href="#contact">Contact</a>
-.support-icon {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  border-radius: 40%;
-  cursor: pointer;
-}
+  
+<meta charset="UTF-8">
+  <title>24/7 Support</title>
+  <style>
+    .customer-service {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      width: fit-content;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .customer-service:hover {
+      background-color: #e0e0e0;
+    }
+
+    .support-icon {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      border-radius: 40%;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .customer-service span {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
   </style>
 </head>
 <body>
 
-<div class="customer-service" onclick="openWhatsApp()">
-  <img src="images/support.png" alt="Support Logo" class="support-icon" />
-  <span>24/7 Support</span>
-</div>
+  <div class="customer-service" onclick="openWhatsApp()">
+    <img src="images/support.png" alt="Support Logo" class="support-icon">
+    <span></span>
+  </div>
 
-<script>
-  function openWhatsApp() {
-    const url = "https://wa.me/8801323056735";
-    window.open(url, "_blank");
-  }
-</script>
+  <script>
+    function openWhatsApp() {
+      const url = "https://wa.me/8801323056735";
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
 
 </nav>
 <style>
@@ -2040,6 +2069,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

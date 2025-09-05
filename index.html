@@ -521,6 +521,64 @@
     });
   });
 </script>
+<style>
+  /* ✅ Desktop Default Style */
+  .home-section {
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #002856;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .featured-categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .category-box {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+  }
+
+  /* ✅ Mobile Responsive */
+  @media (max-width: 768px) {
+    .home-section {
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-size: 22px; /* Smaller title */
+    }
+
+    .section-subtitle {
+      font-size: 16px; /* Smaller subtitle */
+    }
+
+    .category-box {
+      width: 100%;      /* Full width in mobile */
+      padding: 15px;
+    }
+
+    .featured-categories {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+</style>
 
   
    <title>Running Notice Inside Section</title>
@@ -2042,6 +2100,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

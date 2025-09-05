@@ -556,7 +556,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 40px;
+      font-size: 38px;
       font-weight: bold;
       margin: 0 auto;
       max-width: 100%;
@@ -724,6 +724,23 @@
 <section id="products">
   <h2 class="section-title">Featured Categories</h2>
   <div class="featured-category">
+     <style>
+    .headline {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 38px;
+      font-weight: bold;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      .headline {
+        font-size: 25px;
+      }
+    }
+  </style>
     <div class="card">
       <i class="fas fa-server"></i>
       <p>Networking Server</p>
@@ -922,7 +939,7 @@
 
   @media (max-width: 600px) {
     .featured-category {
-      grid-template-columns: 1fr; /* মোবাইলে ১ কলাম */
+      grid-template-columns: 2fr; /* মোবাইলে ১ কলাম */
       padding: 0 3px;
     }
 
@@ -2063,6 +2080,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

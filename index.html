@@ -524,23 +524,9 @@
 </section>
   
 <section id="home" style="padding: 20px 20px; text-align: center;">
-
   <h2 class="headline">Your Team, Our Tech Support</h2>
   <p class="subtext">Trust in Our Experience</p>
  <style>
-#home {
-  padding: 40px 20px;
-  box-sizing: border-box;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-/* ✅ মোবাইলে শুধু মিন-হাইট প্রয়োগ করলাম */
-@media (max-width: 480px) {
-  #home {
-    min-height: 100vh;
-  }
-
     .headline {
       white-space: nowrap;
       overflow: hidden;
@@ -727,8 +713,7 @@
 
 <style>
   .notice-section {
- /*  background-color: #fff5e1; */
-    border-top: 2px solid #3F51B5;   /* ✅ Header color (blue) border */
+    border-top: 2px solid #3F51B5;
     border-bottom: 2px solid #3F51B5;
     padding: 10px 0;
     width: 100vw;
@@ -747,7 +732,7 @@
     animation: marquee 50s linear infinite;
     font-weight: bold;
     font-size: 18px;
-    color: red; /* 🔴 লেখার রঙ লাল করে দেওয়া হলো */
+    color: red;
     padding-left: 100%;
   }
 
@@ -756,12 +741,17 @@
     100% { transform: translateX(-100%); }
   }
 
-  */ @media (max-width: 480px) {
+  @media (max-width: 480px) {
+    .notice-section {
+      display: none; /* ✅ মোবাইলে হাইড করে দিচ্ছি */
+    }
+
     .marquee-text {
-      font-size: 14px; */
+      font-size: 14px;
     }
   }
 </style>
+
   
 <section id="products">
   <h2 class="section-title">Featured Categories</h2>
@@ -2126,6 +2116,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

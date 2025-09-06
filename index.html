@@ -522,55 +522,6 @@
     });
   });
 </script>
-<!-- 🔔 Running Notice Section Start -->
-<section class="notice-section">
-  <div class="marquee-wrapper">
-    <div class="marquee-text">
-      🔔 আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন! আমরা দিচ্ছি ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে! আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন।
-    </div>
-  </div>
-</section>
-<!-- 🔔 Running Notice Section End -->
-
-<style>
-  .notice-section {
-    background-color: #fff4e6;
-    border: 2px solid #ff9800;     /* চারপাশে border */
-    border-left: 0;                /* বাম পাশ বাদ দিলে, এটা কেটে দাও */
-    border-right: 0;               /* ডান পাশ বাদ দিলে, এটাও কেটে দাও */
-    padding: 10px 0;
-    width: 100vw;                  /* পুরো স্ক্রিন জুড়ে প্রস্থ */
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  .marquee-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .marquee-text {
-    display: inline-block;
-    white-space: nowrap;
-    animation: marquee 25s linear infinite;
-    font-weight: bold;
-    font-size: 18px;
-    color: #d84315;
-    padding-left: 100%;
-  }
-
-  @keyframes marquee {
-    0%   { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  @media (max-width: 480px) {
-    .marquee-text {
-      font-size: 14px;
-    }
-  }
-</style>
-
 
 <section id="home" style="padding: 20px 20px; text-align: center;">
   <h2 class="headline">Your Team, Our Tech Support</h2>
@@ -746,11 +697,58 @@
       }
     });
   </script>
-
 </body>
 </html>
 </section>
+  
+<!-- 🔔 Running Notice Section Start -->
+<section class="notice-section">
+  <div class="marquee-wrapper">
+    <div class="marquee-text">
+      🔔 আমাদের যেকোনো সেবা নিতে "24/7 Support" ক্লিক করে সরাসরি যোগাযোগ করুন! আমরা দিচ্ছি ২৪/৭ নিরবিচ্ছিন্ন সাপোর্ট — আমরা আছি সবসময় আপনার পাশে! আপনার প্রয়োজনীয় সেবা পেতে এখনই ক্লিক করে সরাসরি যোগাযোগ করুন। আমাদের অভিজ্ঞ টিম দিন-রাত যেকোনো সময় আপনাকে সহায়তা করতে প্রস্তুত। বিশ্বাসের সঙ্গে নিরবিচার সার্ভিস পেতে আমাদের সঙ্গেই থাকুন।
+    </div>
+  </div>
+</section>
+<!-- 🔔 Running Notice Section End -->
 
+<style>
+  .notice-section {
+ /*  background-color: #fff5e1; */
+    border-top: 2px solid #3F51B5;   /* ✅ Header color (blue) border */
+    border-bottom: 2px solid #3F51B5;
+    padding: 10px 0;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 50s linear infinite;
+    font-weight: bold;
+    font-size: 18px;
+    color: red; /* 🔴 লেখার রঙ লাল করে দেওয়া হলো */
+    padding-left: 100%;
+  }
+
+  @keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @media (max-width: 480px) {
+    .marquee-text {
+      font-size: 14px;
+    }
+  }
+</style>
+  
 <section id="products">
   <h2 class="section-title">Featured Categories</h2>
   <div class="featured-category">
@@ -2114,6 +2112,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

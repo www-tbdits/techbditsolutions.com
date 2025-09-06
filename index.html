@@ -716,9 +716,11 @@
     border-top: 2px solid #3F51B5;
     border-bottom: 2px solid #3F51B5;
     padding: 10px 0;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative; /* মোবাইলে নিচে দেখানোর জন্য ফ্লেক্সিবল পজিশন */
+    z-index: 10;
   }
 
   .marquee-wrapper {
@@ -741,13 +743,15 @@
     100% { transform: translateX(-100%); }
   }
 
+  /* মোবাইলে ছোট ফন্ট */
   @media (max-width: 480px) {
-    .notice-section {
-      display: none; /* ✅ মোবাইলে হাইড করে দিচ্ছি */
-    }
-
     .marquee-text {
       font-size: 14px;
+    }
+
+    .notice-section {
+      position: static; /* মোবাইলে সাধারণ অবস্থান */
+      margin-top: 10px;  /* menu এর নিচে সামান্য ফাঁকা */
     }
   }
 </style>
@@ -2116,6 +2120,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

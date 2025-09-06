@@ -563,18 +563,24 @@
       max-width: 100%;
     }
 
-    @media (max-width: 480px) {
-      .headline {
-        font-size: 20px;
-      }
-    }
-
     .subtext {
       font-size: 30px;
       color: #555;
       margin-top: 10px;
     }
+
+    /* মোবাইলের জন্য */
+    @media (max-width: 480px) {
+      .headline {
+        font-size: 20px;
+      }
+
+      .subtext {
+        font-size: 16px; /* মোবাইলে ছোট ফন্ট */
+      }
+    }
   </style>
+  </section>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>বড় সার্চ বার সহ Responsive Search</title>
   <style>
@@ -2085,6 +2091,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

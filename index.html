@@ -813,6 +813,63 @@
   }
 </style>
 
+  <head>
+  <title>PC Only Running Notice</title>
+  <style>
+    /* 🖥️ Running Notice — শুধু PC তে দেখা যাবে */
+  .notice-section-pc {
+      display: block;
+      border-top: 2px solid #3F51B5;
+      border-bottom: 2px solid #3F51B5;
+      padding: 10px 0;
+      background-color: #fff8f8;
+      overflow: hidden;
+    }
+
+    .notice-text-pc {
+      font-size: 16px;
+      font-weight: bold;
+      color: #00796B;
+    }
+
+    .marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 40s linear infinite;
+      font-weight: bold;
+      font-size: 16px;
+      color: red;
+      padding-left: 100%;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* 📱 মোবাইলে Hide করে দেওয়া হলো */
+    @media (max-width: 480px) {
+      .notice-section-pc {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔔 Running Notice for PC -->
+  <section class="notice-section-pc">
+    <div class="marquee-wrapper">
+      <div class="marquee-text">
+        🔔 এখন আমাদের সার্ভিস আরও দ্রুত! নতুন ফিচার দেখতে ঘুরে দেখুন আমাদের ওয়েবসাইটে। ২৪/৭ সাপোর্ট – আপনার পাশে আমরা সব সময়।
+      </div>
+    </div>
+  </section>
   
 <section id="products">
   <h2 class="section-title">Featured Categories</h2>
@@ -2177,6 +2234,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

@@ -357,11 +357,12 @@
       <img src="images/TB.png" alt="Logo" class="logo-img" onclick="goToHomeSection()" />
     </div>
 
-    <div class="header-right">
-      <span class="account-icon" onclick="goToLogin()">👤</span>
-      <img src="images/support.png" alt="Support" class="support-icon" onclick="openWhatsApp()" />
-    </div>
-  </header>
+<div class="header-right">
+    <!-- ✅ এই icon সব ডিভাইসে থাকবে -->
+    <span class="account-icon" onclick="goToLogin()">👤</span>
+    <img src="images/support.png" alt="Support" class="support-icon" onclick="openWhatsApp()" />
+  </div>
+</header>
 
   <!-- ✅ স্ক্রিপ্ট -->
   <script>
@@ -439,10 +440,17 @@
     border-radius: 3px;
   }
 
-  .account-icon {
-    font-size: 22px;
-    cursor: pointer;
-  }
+  .header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
 
   .support-text {
     font-size: 13px;
@@ -2285,6 +2293,7 @@ Because your business deserves uninterrupted support.
 </>
 
  
+
 
 
 

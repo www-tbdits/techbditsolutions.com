@@ -1,0 +1,1052 @@
+<!-- Interactive Showcase / Products Section with Dynamic Filtering -->
+<section id="products" class="py-24 bg-navy-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-0">
+            <div>
+                <span
+                    class="text-xs font-tech text-cyan-glow uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-cyan-glow/10 border border-cyan-glow/20">Verified
+                    Hardware & Gear</span>
+                <h2 class="text-3xl sm:text-1xl font-extrabold text-white tracking-tight mt-2">Hardware & Product</h2>
+            </div>
+
+            <!-- Filter Category Tabs with Electric Option -->
+            <div class="flex flex-wrap gap-2" id="productFilterTabs">
+                <button onclick="filterProducts('all')"
+                    class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cyan-glow text-navy-900 shadow-neon-sm transition-all"
+                    data-cat="all">All Items</button>
+                <button onclick="filterProducts('networking')"
+                    class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-navy-800 text-slate-300 hover:text-cyan-glow border border-slate-700 transition-all"
+                    data-cat="networking">Networking</button>
+                <button onclick="filterProducts('cctv')"
+                    class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-navy-800 text-slate-300 hover:text-cyan-glow border border-slate-700 transition-all"
+                    data-cat="cctv">Surveillance</button>
+                <button onclick="filterProducts('hardware')"
+                    class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-navy-800 text-slate-300 hover:text-cyan-glow border border-slate-700 transition-all"
+                    data-cat="hardware">Hardware</button>
+                <button onclick="filterProducts('power')"
+                    class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-navy-800 text-slate-300 hover:text-cyan-glow border border-slate-700 transition-all"
+                    data-cat="power">Electrical & Accessories</button>
+                <button onclick="filterProducts('computer')"
+                    class="product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-navy-800 text-slate-300 hover:text-cyan-glow border border-slate-700 transition-all"
+                    data-cat="computer">Computer Items</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="productGrid">
+
+            <!-- Networking Products (1 to 10) -->
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="Mikrotik hEX S Router">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/675817234/photo/media-converter-with-optical-patchcord-and-router-connected-via-copper-cable.webp?a=1&b=1&s=612x612&w=0&k=20&c=hdYvapr4OXUSeaHJNp9sGAu6tVNhLWrMPPVcwKwo6ck="
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">MikroTik</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">MikroTik / Media converter </h4>
+                    <p class="text-xs text-slate-400 mb-3">High-performance outdoor-rated smart Fiber-to-Copper media
+                        converter featuring PoE support, weatherproofing, and SwOS Lite management capability.</p>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 1</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 25,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="Cisco Catalyst 24 Port Switch">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT61erxloaXW9blV9nueO-P1mkYBQn3avosMOtF0ZSz-zpzxe94"
+                            alt="Cisco Switch"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Cisco</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Cisco Gigabit Switch</h4>
+                    <p class="text-xs text-slate-400 mb-3">Enterprise-grade 24-Port Managed Gigabit Ethernet Switch
+                        equipped with 4x SFP Uplink Ports, optimized for rackmount setup.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 2</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 26,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="TP-Link Omada Wi-Fi 6 AP">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://images.unsplash.com/photo-1681383064412-171e5bee5f6e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Wi-Fi AP"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">TP-Link</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Wi-Fi Access Point</h4>
+                    <p class="text-xs text-slate-400 mb-3">AX1800 Dual-Band Ceiling Mount Wi-Fi 6 Wireless Access Point,
+                        designed for high-density business networking via PoE.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 3</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 11,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="Ubiquiti UniFi NanoHD">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://images.svc.ui.com/?u=https%3A%2F%2Fcdn.ecomm.ui.com%2Fproducts%2F920b705b-9e11-46a4-8fa4-783e62147b1a%2F6be34c44-7a20-4ccf-bf4c-2c15b2301e97.png&q=75&w=1080"
+                            alt="UniFi"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Ubiquiti</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Ubiquiti UniFi NanoHD AP</h4>
+                    <p class="text-xs text-slate-400 mb-3">Compact 4x4 MU-MIMO Wave 2 enterprise Wi-Fi access point
+                        delivering high-throughput wireless coverage.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 4</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 16,800</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="TP-Link 16 Port Gigabit Switch">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://plus.unsplash.com/premium_photo-1671029898272-5dc5267f9c13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Switch"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">TP-Link</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">TP-Link 16-Port Gigabit Switch</h4>
+                    <p class="text-xs text-slate-400 mb-3">Reliable 16-Port Unmanaged Gigabit Desktop/Rackmount Switch
+                        offering seamless plug-and-play network expansion.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 5</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 7,800</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="Tenda O3 Outdoor CPE">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://static.tenda.com.cn/tdeweb/pro_pictures/O3v2/8.png" alt="Outdoor CPE"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Tenda</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Tenda O3 Outdoor Point-to-Point CPE</h4>
+                    <p class="text-xs text-slate-400 mb-3">2.4GHz 150Mbps outdoor weather-proof wireless bridge designed
+                        for long-range point-to-point transmission.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 6</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 4,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="networking" data-title="TP-Link Archer AX50">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/2273758050/photo/black-wi-fi-router-with-four-antennas-placed-on-a-white-laptop-modern-home-networking.webp?a=1&b=1&s=612x612&w=0&k=20&c=Yo6PaYYEXLKXCKStpBxVC5pVSgcvQB2u24Vh7s2XXTM="
+                            alt="Router"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">TP-Link</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">TP-Link Archer AX50 Wi-Fi 6</h4>
+                    <p class="text-xs text-slate-400 mb-3">Gigabit Dual-Band Wi-Fi 6 Router built for seamless gaming,
+                        4K streaming, and multiple device connectivity.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 7</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 8,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surveillance / CCTV Products (11 to 20) -->
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Dahua 8 Channel NVR Kit">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/formal/Product/HQ/1_0_01_23_15458/ProductImage/1_0_01_23_15458_511735443_crop_thumb.png"
+                            alt="CCTV Kit"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Dahua</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Dahua 8-CH 4K IP NVR System</h4>
+                    <p class="text-xs text-slate-400 mb-3">Complete security kit including 8-channel 4K NVR, 4x 4MP AI
+                        Audio IP cameras, 1TB surveillance HDD, and PoE switch.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 8</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 32,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Hikvision PTZ Camera">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/1448264646/photo/modern-public-cctv-camera-on-wall-isolated-on-white-background-intelligent-reccording-cameras.webp?a=1&b=1&s=612x612&w=0&k=20&c=u4vMRBM5zrrbX5QXzw8bPyboifBD4hZKzp-OE_yVPgo="
+                            alt="Hikvision PTZ"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Hikvision</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Hikvision 4MP PTZ IP Camera</h4>
+                    <p class="text-xs text-slate-400 mb-3">High-speed Pan-Tilt-Zoom intelligent outdoor IP camera with
+                        Starlight ultra-low light night vision and 360° pan.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 9</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 15,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="ZKTeco Biometric Terminal">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/626002836/photo/time-attendance-system-on-the-cloud.webp?a=1&b=1&s=612x612&w=0&k=20&c=aoL_ZmcLKQA_liOCQemoOKfBNIXovUY6BHalvoXO1J0="
+                            alt="ZKTeco"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">ZKTeco</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">ZKTeco Biometric Terminal</h4>
+                    <p class="text-xs text-slate-400 mb-3">Time attendance and access control terminal supporting
+                        fingerprint, RFID smart card, and pin identification.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 10</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 10,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Imou Ranger 2">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://static-website.imou.com/a19a2205-1dc4-472d-bfdc-44af577a34bc.png"
+                            alt="Imou Camera"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Imou</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Imou Ranger 2 1080P Camera</h4>
+                    <p class="text-xs text-slate-400 mb-3">Smart indoor Wi-Fi camera with 360-degree coverage, AI human
+                        detection, motion tracking, and full two-way audio.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 11</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 3,800</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Hikvision 2MP Outdoor Camera">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/677971334/photo/cctv-security-camera-2-megapixel.webp?a=1&b=1&s=612x612&w=0&k=20&c=XNbTr8i3vSLOStJzXmOpKQ1ly53r8RId_MccSwtzDt0="
+                            alt="Hikvision Camera"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Hikvision</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Hikvision 2MP Bullet Camera</h4>
+                    <p class="text-xs text-slate-400 mb-3">IP67 weatherproof outdoor bullet camera with EXIR 2.0 smart
+                        IR technology for clear night surveillance.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 12</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 2,900</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Dahua 4 Channel DVR">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/882444770/photo/generic-internet-networking-device-router-isolated-over-the-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=hs-9AopbXVlQnKBQ32YEpvvcaRNQybHoAfcaIt1m-xc="
+                            alt="DVR"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Dahua</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Dahua 4-CH 1080P WizSense DVR</h4>
+                    <p class="text-xs text-slate-400 mb-3">4-Channel 1080P digital video recorder featuring WizSense AI
+                        technology for precise human and vehicle detection.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 13</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 5,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Ezviz C6N Smart Camera">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/967903004/photo/home-security-camera-360.webp?a=1&b=1&s=612x612&w=0&k=20&c=Tdhd7MFkIqYQ4zkQlPirH-qe8lSYVjtlmHz6zPOUcGA="
+                            alt="Ezviz Camera"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Ezviz</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Ezviz C6N 1080P Wi-Fi Camera</h4>
+                    <p class="text-xs text-slate-400 mb-3">Motorized 360-degree smart indoor camera with auto-tracking,
+                        IR night vision, and mobile application control.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 14</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 3,600</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Uniview 2MP IP Camera">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/1875674241/photo/cctv-security-camera-isolated-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=b7SHkop6LAAXY-3hlHBuTVwQ3vbdaEVvtkQjXRI1XhA="
+                            alt="Uniview Camera"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Uniview</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Uniview 2MP Turret IP Camera</h4>
+                    <p class="text-xs text-slate-400 mb-3">High-definition fixed turret IP camera with Digital WDR, 30m
+                        smart IR night vision, and PoE connectivity.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 15</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 4,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="cctv" data-title="Access Control Fingerprint Lock">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://okashasmart.com/cdn/shop/files/glass_to_Aluminium_web_image_5.webp?v=1757070531&width=1920"
+                            alt="Door Lock"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Security</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Biometric Door Access Lock</h4>
+                    <p class="text-xs text-slate-400 mb-3">Heavy-duty biometric electromagnetic lock solution for office
+                        glass and wooden doors with fingerprint & password security.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 16</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 16,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardware & Accessories Products (21 to 30) -->
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="hardware" data-title="12U Wall Mount Server Rack">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/1358417038/photo/network-server.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZW52FTdSXFkpLgNLJrK5W3KPaVl5QRuT-OLayo5rKDE="
+                            alt="Server Rack"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Rack
+                            Tech</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Server Rack</h4>
+                    <p class="text-xs text-slate-400 mb-3">12U wall-mount network server enclosure constructed from
+                        cold-rolled steel, featuring glass door, cooling fan, and PDU power strip.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 17</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 9,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="hardware" data-title="D-Link Cat6 Cable Box">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/1430912769/photo/utp-cable-category-6-for-network-connection-on-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=5jC2dgP-ZhUqKeZ5CWBtYlyZ3lsyR-7-ewWHyrjS-3A="
+                            alt="Cat6 Cable"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">D-Link</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">D-Link Cat6 UTP Cable (305m)</h4>
+                    <p class="text-xs text-slate-400 mb-3">Premium 305-meter roll of 100% solid copper Cat6 UTP ethernet
+                        cable for ultra-fast structured network wiring.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 18</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 14,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="hardware" data-title="Seagate IronWolf 4TB HDD">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://images.unsplash.com/photo-1676554565711-1557916003e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="Seagate HDD"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Seagate</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Seagate IronWolf 4TB NAS HDD</h4>
+                    <p class="text-xs text-slate-400 mb-3">Enterprise 4TB 3.5-inch internal SATA hard drive engineered
+                        specifically for 24/7 multi-bay NAS storage performance.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 19</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 13,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="hardware" data-title="Patch Panel 24 Port Cat6">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/179054028/photo/datacenter-network-equipment-parts.webp?a=1&b=1&s=612x612&w=0&k=20&c=5-kJJZv5r3tvaRqZ1EOfwlmLlW7ncbxmz5SspvcrJds="
+                            alt="Patch Panel"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Networking</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">24-Port Cat6 Patch Panel</h4>
+                    <p class="text-xs text-slate-400 mb-3">Fully loaded 1U 19-inch rackmount Cat6 patch panel designed
+                        for seamless cable management in data centers.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 20</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 4,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="hardware" data-title="Fiber Optic Media Converter">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://media.istockphoto.com/id/670964272/photo/media-converter-and-switch-hub.webp?a=1&b=1&s=612x612&w=0&k=20&c=kRPFCwNz63mcuFG50ZaClPAB4sLCNOelmEKln0RVRTE="
+                            alt="Media Converter"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Fiber</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Gigabit Fiber Optic Media Converter</h4>
+                    <p class="text-xs text-slate-400 mb-3">Single-mode dual fiber SC port transceiver kit (A/B Pair) for
+                        extended high-speed optical transmission.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 21</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 2,800</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Power / UPS Products (31 to 40) -->
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="power" data-title="Online UPS 2KVA">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROpibmVITtOZWuodiPYfF-UmkL7HW7Vc_J-9iamqYaoQ&s=10"
+                            alt="Online UPS"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-amber-400/20 text-amber-400 px-2 py-0.5 rounded border border-amber-400/30 z-10">Online
+                            UPS</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Online UPS</h4>
+                    <p class="text-xs text-slate-400 mb-3">2KVA Double Conversion Online UPS with zero transfer time,
+                        LCD real-time display, and advanced surge protection.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 22</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 36,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="power" data-title="Office IPS 3KVA">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgvFiqdUSmHlO8-CTMym4trwOt84O3JEckKuKCWhxQ55EeeTLDimwQ205a&s=10"
+                            alt="IPS"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-amber-400/20 text-amber-400 px-2 py-0.5 rounded border border-amber-400/30 z-10">Power
+                            IPS</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">IPS Package</h4>
+                    <p class="text-xs text-slate-400 mb-3">Pure sine wave 3KVA IPS package designed for uninterrupted
+                        backup power for office lighting, computers, and fans.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 23</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 29,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="power" data-title="Industrial Generator 15KVA">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfwhN-3w50QOj-0zfhhLNSKf876McdCFn6oRk6MLBWuw&s=10"
+                            alt="Generator"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-amber-400/20 text-amber-400 px-2 py-0.5 rounded border border-amber-400/30 z-10">Generator</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Generator System</h4>
+                    <p class="text-xs text-slate-400 mb-3">15KVA heavy-duty silent canopy diesel generator providing
+                        full electrical power backup for office buildings.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 24</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 3,10,000</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="power" data-title="UPS Replacement Battery">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://thumbs.dreamstime.com/b/open-electrical-switchgear-safeguarding-power-distribution-infrastructure-industrial-plant-applications-image-377948908.jpg?w=992e"
+                            alt="Battery"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-amber-400/20 text-amber-400 px-2 py-0.5 rounded border border-amber-400/30 z-10">Battery</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Electrical Switchgear & Battery</h4>
+                    <p class="text-xs text-slate-400 mb-3">Modern electrical distribution protection system & 12V
+                        rechargeable maintenance-free SLA battery for power units.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 25</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 2,200</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Computer & Accessories Products -->
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="computer" data-title="Wireless Mechanical Keyboard">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKCZ9PQvsn_gA7r1ugxlBBP6AT5QEpHjxz6YLBErdp_w&s=10"
+                            alt="Mechanical Keyboard"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Computer</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Keyboard Mouse combo</h4>
+                    <p class="text-xs text-slate-400 mb-3">Ergonomic mechanical keyboard & wireless optical mouse combo
+                        featuring dual Bluetooth/2.4G connection and RGB lights.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 26</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 4,500</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="computer" data-title="Ergonomic Wireless Mouse">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWts6fgq8R2RO-BK4qjiIdchL4qa3H_MJ_kcHc3HoKIwopdmxtvb4eatE&s=10"
+                            alt="Wireless Mouse"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Computer</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">Computer & Accessories</h4>
+                    <p class="text-xs text-slate-400 mb-3">High-precision ergonomic wireless mouse with adjustable DPI
+                        levels, designed for smooth productivity and gaming performance.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 27</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 1,800</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card glass-card rounded-2xl p-5 border border-slate-800 hover:border-cyan-glow/50 transition-all duration-300 flex flex-col justify-between"
+                data-category="computer" data-title="Type-C Multiport Hub">
+                <div>
+                    <div
+                        class="relative bg-navy-900 rounded-xl p-2 mb-4 flex items-center justify-center h-48 overflow-hidden group border border-slate-800">
+                        <img src="images/TB.png" alt="Tech BD Logo"
+                            class="absolute top-2 left-2 h-6 w-auto opacity-70 object-contain z-10">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmoD6efC3pwROZK8rGDLFVs-RDqOzQtnsTLC5Rbmj8qA&s=10"
+                            alt="Type-C Hub"
+                            class="h-full w-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <span
+                            class="absolute top-2 right-2 text-[10px] font-mono bg-cyan-glow/20 text-cyan-glow px-2 py-0.5 rounded border border-cyan-glow/30 z-10">Computer</span>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">7-in-1 USB-C Hub Adapter</h4>
+                    <p class="text-xs text-slate-400 mb-3">Multifunctional Type-C hub featuring 4K HDMI, 100W Power
+                        Delivery, USB 3.0 ports, and SD/TF card reader support.</p>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-cyan-glow font-tech font-bold text-lg">৳ 28</span>
+                        <span class="line-through text-slate-500 text-sm font-normal">৳ 2,700</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://api.whatsapp.com/send/?phone=8801323056735&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-2.5 rounded-xl bg-royal/40 hover:bg-cyan-glow hover:text-navy-900 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-chats-teardrop"></i> Negotiable
+                        </a>
+                        <a href="tel:+8801323056735"
+                            class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-phone-call"></i> Hotline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

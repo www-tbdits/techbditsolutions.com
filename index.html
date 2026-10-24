@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech BD IT Solutions</title>
+  <!-- Favicon / Browser Tab Icon -->
+  <link rel="icon" type="image/png" href="images/PosLogo.png">
+  <link rel="apple-touch-icon" href="images/PosLogo.png">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome & Phosphor Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              900: '#070c1e',
+              800: '#0b132b',
+              700: '#1c2541',
+              600: '#2a385b'
+            },
+            cyan: {
+              glow: '#00f2fe',
+              electric: '#4facfe'
+            },
+            royal: '#004aad'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            tech: ['Space Grotesk', 'sans-serif']
+          },
+          boxShadow: {
+            'neon': '0 0 25px rgba(0, 242, 254, 0.4)',
+            'neon-sm': '0 0 10px rgba(0, 242, 254, 0.3)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="bg-navy-900 text-slate-100 font-sans antialiased selection:bg-cyan-glow selection:text-navy-900 overflow-x-hidden custom-scrollbar">
+
+  <!-- Top Running Notice Bar / Ticker (Right to Left Scrolling) -->
+  <div class="bg-navy-800 border-b border-cyan-glow/20 text-xs sm:text-sm py-2 px-4 relative z-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-cyan-glow font-medium shrink-0 z-10 bg-navy-800 pr-2">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-glow opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-glow"></span>
+        </span>
+        <i class="fa-solid font-bold fa-bullhorn text-xs"></i>
+        <span class="hidden sm:inline font-tech tracking-wider uppercase text-xs">Official Notice:</span>
+      </div>
+
+      <!-- Notice Continuous Right-to-Left Marquee Container -->
+      <div class="overflow-hidden whitespace-nowrap w-full relative flex">
+        <div class="marquee-rtl text-slate-500 hover:[animation-play-state:paused]">
+          <span class="text-white font-semibold">For any of our services, simply click the 'Customer Service' icon to
+            get in touch with us directly! We offer 24/7 non-stop support — we are always here for you. Click now to
+            access your required service and speak with us immediately. Our expert team is available 24/7 to assist you.
+            Stay with us for reliable and uninterrupted service.</span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3 shrink-0 text-slate-400 text-xs z-10 bg-navy-800 pl-2">
+        <span><i class="fa-regular fa-clock text-cyan-glow mr-1"></i>Sat - Thu: 9AM - 10PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-40 bg-navy-900/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300"
+    id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Direct Logo & Text -->
+        <a href="#" class="flex items-center gap-3 group">
+          <!-- Updated Logo from second file -->
+          <img src="images/TB.png" alt="Tech BD Logo"
+            class="h-14 w-auto object-contain transition-transform group-hover:scale-105" />
+          <div>
+            <span class="font-tech text-xl sm:text-2xl font-bold tracking-tight text-white block leading-none">
+              TECH <span class="text-cyan-glow">BD</span>
+            </span>
+            <span class="text-[10px] font-medium tracking-widest text-slate-400 uppercase block mt-1">IT
+              Solutions</span>
+          </div>
+        </a>
+
+        <!-- Desktop Search Bar -->
+        <div class="hidden lg:flex items-center relative w-72">
+          <input type="text" id="globalSearch" onkeyup="handleGlobalSearch()" placeholder="Search products, services..."
+            class="w-full bg-navy-800/80 text-sm text-slate-200 placeholder-slate-400 rounded-full pl-10 pr-4 py-2 border border-slate-700 focus:border-cyan-glow focus:outline-none focus:ring-1 focus:ring-cyan-glow transition-all">
+          <i class="ph ph-magnifying-glass absolute left-3.5 top-2.5 text-slate-400 text-lg"></i>
+          <!-- Instant Dropdown Results -->
+          <div id="searchDropdown"
+            class="hidden absolute top-12 left-0 w-full glass-card rounded-2xl shadow-2xl p-2 z-50 max-h-80 overflow-y-auto custom-scrollbar border border-cyan-glow/30">
+          </div>
+        </div>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+          <a href="#hero"
+            class="hover:text-cyan-glow transition-colors py-2 border-b-2 border-transparent hover:border-cyan-glow">Home</a>
+          <a href="#services"
+            class="hover:text-cyan-glow transition-colors py-2 border-b-2 border-transparent hover:border-cyan-glow">Services</a>
+          <a href="#products"
+            class="hover:text-cyan-glow transition-colors py-2 border-b-2 border-transparent hover:border-cyan-glow">Products</a>
+          <a href="#about"
+            class="hover:text-cyan-glow transition-colors py-2 border-b-2 border-transparent hover:border-cyan-glow">About
+            Us</a>
+          <a href="#contact"
+            class="hover:text-cyan-glow transition-colors py-2 border-b-2 border-transparent hover:border-cyan-glow">Contact</a>
+        </div>
+
+        <!-- Right Action Buttons (Short & Sleek) -->
+        <div class="hidden sm:flex items-center gap-2">
+          <!-- Careers Button (Icon + Compact Padding) -->
+          <button onclick="openModal('careerModal')"
+            class="p-2.5 sm:px-3 sm:py-2 rounded-xl text-xs font-semibold bg-navy-800 text-slate-200 border border-slate-700 hover:border-cyan-glow hover:text-cyan-glow transition-all"
+            title="Careers">
+            <i class="ph ph-briefcase text-cyan-glow text-sm sm:mr-1"></i>
+            <span class="hidden sm:inline">Career</span>
+          </button>
+
+          <!-- Live Support Button (Icon Only or Compact WhatsApp) -->
+          <a href="https://wa.me/8801323056735" target="_blank"
+            class="p-2.5 sm:px-3 sm:py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-royal to-cyan-glow text-navy-900 shadow-neon-sm hover:shadow-neon hover:scale-105 transition-all flex items-center gap-1.5"
+            title="Live Support">
+            <i class="ph-bold ph-whatsapp-logo text-sm"></i>
+            <span class="hidden sm:inline">Support</span>
+          </a>
+
+          <!-- User Portal / Login Button (Icon Only / Sleek) -->
+          <a href="https://www-tbdits.github.io/smartpos.com.bd/" target="_blank" rel="noopener noreferrer"
+            class="p-2.5 sm:px-3 sm:py-2 rounded-xl text-xs font-bold bg-navy-800 text-cyan-glow border border-cyan-glow/40 hover:bg-cyan-glow hover:text-navy-900 transition-all flex items-center gap-1.5"
+            title="User Portal / Login">
+            <i class="ph-bold ph-user-circle text-sm"></i>
+            <span class="hidden sm:inline">Portal</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button onclick="toggleMobileMenu()"
+          class="md:hidden text-slate-300 hover:text-cyan-glow p-2 text-2xl focus:outline-none">
+          <i class="ph ph-list" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu"
+      class="hidden md:hidden bg-navy-800/95 backdrop-blur-2xl border-b border-cyan-glow/20 px-6 py-6 space-y-4">
+      <div class="relative mb-4">
+        <input type="text" id="mobileSearch" onkeyup="handleMobileSearch()" placeholder="Search services or hardware..."
+          class="w-full bg-navy-900 text-sm text-slate-200 placeholder-slate-400 rounded-xl pl-10 pr-4 py-3 border border-slate-700 focus:border-cyan-glow">
+        <i class="ph ph-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-lg"></i>
+      </div>
+      <a href="#hero" onclick="toggleMobileMenu()"
+        class="block text-slate-200 hover:text-cyan-glow font-medium text-lg">Home</a>
+      <a href="#services" onclick="toggleMobileMenu()"
+        class="block text-slate-200 hover:text-cyan-glow font-medium text-lg">Services</a>
+      <a href="#products" onclick="toggleMobileMenu()"
+        class="block text-slate-200 hover:text-cyan-glow font-medium text-lg">Products & Hardware</a>
+      <a href="#about" onclick="toggleMobileMenu()"
+        class="block text-slate-200 hover:text-cyan-glow font-medium text-lg">About Us</a>
+      <a href="#contact" onclick="toggleMobileMenu()"
+        class="block text-slate-200 hover:text-cyan-glow font-medium text-lg">Contact</a>
+
+      <div class="pt-4 border-t border-slate-700/60 flex flex-col gap-3">
+        <button onclick="toggleMobileMenu(); openModal('careerModal');"
+          class="w-full py-3 rounded-xl bg-navy-900 border border-slate-700 text-slate-200 font-semibold text-center">
+          <i class="ph ph-briefcase mr-2"></i> Join Our Tech Team
+        </button>
+        <a href="https://wa.me/8801323056735" target="_blank"
+          class="w-full py-3 rounded-xl bg-gradient-to-r from-royal to-cyan-glow text-navy-900 font-bold text-center flex items-center justify-center gap-2">
+          <i class="ph-bold ph-whatsapp-logo text-base"></i> Live Support
+        </a>
+        <!-- Mobile User Portal Link -->
+        <a href="https://www-tbdits.github.io/smartpos.com.bd/" target="_blank" rel="noopener noreferrer"
+          class="w-full py-3 rounded-xl bg-navy-900 border border-cyan-glow/30 text-cyan-glow font-bold text-center flex items-center justify-center gap-2">
+          <i class="ph-bold ph-user-circle text-lg"></i> Portal Login
+        </a>
+        <a href="tel:09638665205"
+          class="w-full py-3 rounded-xl bg-navy-900 border border-slate-700 text-slate-200 font-bold text-center flex items-center justify-center gap-2">
+          <i class="ph-bold ph-phone-call"></i> Call Hotline: 09638665205
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Canvas Particle Background -->
+  <section id="hero"
+    class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy-900 bg-grid-pattern py-8">
+    <!-- Canvas for Dynamic Cyber Grid Particles -->
+    <canvas id="heroCanvas" class="absolute inset-0 pointer-events-none opacity-80"></canvas>
+
+    <!-- Dynamic Ambient Light Blobs -->
+    <div
+      class="absolute top-1/4 left-1/10 w-96 h-96 bg-cyan-glow/15 rounded-full blur-[120px] pointer-events-none animate-pulse-glow">
+    </div>
+    <div class="absolute bottom-1/4 right-1/10 w-96 h-96 bg-royal/30 rounded-full blur-[140px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-8">
+          <!-- Tech Tag Badge -->
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-cyan-glow/30 text-xs sm:text-sm text-cyan-glow font-tech tracking-wider">
+            <i class="ph-bold ph-shield-check text-base"></i>
+            <span>LEADING CORPORATE IT & NETWORKING SUPPORT PROVIDER IN BANGLADESH</span>
+          </div>
+
+          <!-- Dynamic Typing Headline -->
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            EMPOWERING YOUR BUSINESS WITH <br>
+            <span class="text-2xl sm:text-4xl text-gradient" id="typingText"></span><span
+              class="animate-pulse text-cyan-glow">|</span>
+          </h1>
+          <p
+            class="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal text-justify">
+            Welcome to Tech bd it solutions. We are a dynamic and forward-thinking corporate IT solution provider. We
+            provide state-of-the-art technological services under one roof to ensure the uninterrupted, secure, and
+            well-organized operations of modern commercial organizations.
+
+            We are committed to building new office spaces and further strengthening and modernizing the digital
+            infrastructure of existing businesses. Our primary goal is to maximize your business productivity and ensure
+            complete security through the precise application of technology.
+          </p>
+
+          <!-- CTAs & Stats -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#products"
+              class="w-full sm:w-auto px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-glow via-cyan-electric to-royal text-navy-900 font-bold text-base tracking-wide shadow-neon hover:scale-105 transition-all text-center flex items-center justify-center gap-3">
+              <i class="ph-bold ph-rocket-launch text-xl"></i> Explore Hardware & Services
+            </a>
+            <button onclick="openModal('mdModal')"
+              class="w-full sm:w-auto px-8 py-3 rounded-xl glass-card text-white hover:text-cyan-glow border border-white/20 hover:border-cyan-glow/60 font-semibold text-base transition-all flex items-center justify-center gap-3">
+              <i class="ph-bold ph-user-circle text-xl text-cyan-glow"></i> Meet Management
+            </button>
+          </div>
+
+          <!-- Trust Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-0 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-2">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-tech text-white">500+</div>
+              <div class="text-xs text-slate-400 mt-0.5">Corporate Clients</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-tech text-cyan-glow">99.9%</div>
+              <div class="text-xs text-slate-400 mt-0.5">Network Uptime</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold font-tech text-white">24/7</div>
+              <div class="text-xs text-slate-400 mt-0.5">Direct Tech Support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Interactive 3D Card Floating Graphic -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md animate-float">
+            <!-- Glass Hero Showcase Box -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 relative z-20 shadow-2xl border border-cyan-glow/30">
+              <!-- Header Status -->
+              <div class="flex items-center justify-between pb-6 border-b border-slate-700/60">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+                  <span class="text-xs font-tech text-slate-300 uppercase tracking-widest">Live Infrastructure
+                    Monitor</span>
+                </div>
+                <span
+                  class="text-xs px-2.5 py-1 rounded-md bg-cyan-glow/10 text-cyan-glow font-mono border border-cyan-glow/20">DHAKA-BD</span>
+              </div>
+
+              <!-- Interactive Dashboard Cards inside Hero Floating Art (Compact Version) -->
+              <div class="space-y-2.5 my-4">
+                <!-- 1. Enterprise Networking -->
+                <div class="p-2.5 rounded-xl bg-navy-900/80 border border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-cyan-glow/10 text-cyan-glow">
+                      <i class="ph-bold ph-graph text-lg"></i>
+                    </div>
+                    <div>
+                      <div class="text-[10px] text-slate-400 leading-tight">Networking Infrastructure</div>
+                      <div class="text-xs font-semibold text-white">Managed Office Network Infrastructure</div>
+                    </div>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">STABLE</span>
+                </div>
+
+                <!-- 2. Smart CCTV Security -->
+                <div class="p-2.5 rounded-xl bg-navy-900/80 border border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-royal/20 text-cyan-glow">
+                      <i class="ph-bold ph-security-camera text-lg"></i>
+                    </div>
+                    <div>
+                      <div class="text-[10px] text-slate-400 leading-tight">Surveillance & Security</div>
+                      <div class="text-xs font-semibold text-white">IP CCTV Installation</div>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono text-cyan-glow bg-cyan-glow/10 px-2 py-0.5 rounded">ACTIVE</span>
+                </div>
+
+                <!-- 3. Access Control -->
+                <div class="p-2.5 rounded-xl bg-navy-900/80 border border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+                      <i class="ph-bold ph-fingerprint text-lg"></i>
+                    </div>
+                    <div>
+                      <div class="text-[10px] text-slate-400 leading-tight">Security & Authentication</div>
+                      <div class="text-xs font-semibold text-white">Biometric Access Control</div>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded">READY</span>
+                </div>
+
+                <!-- 4. Software & Web Development -->
+                <div class="p-2.5 rounded-xl bg-navy-900/80 border border-slate-800 flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400">
+                      <i class="ph-bold ph-code text-lg"></i>
+                    </div>
+                    <div>
+                      <div class="text-[10px] text-slate-400 leading-tight">Digital Solutions</div>
+                      <div class="text-xs font-semibold text-white"> Website & Software Development</div>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">ONLINE</span>
+                </div>
+              </div>
+
+              <button onclick="openModal('quickQuoteModal')"
+                class="w-full py-2.5 rounded-xl bg-navy-800 hover:bg-cyan-glow hover:text-navy-900 text-cyan-glow font-bold text-xs tracking-wider uppercase transition-all duration-300 border border-cyan-glow/30 flex items-center justify-center gap-2">
+                <i class="ph-bold ph-calculator text-base"></i> Instant Price Quote
+              </button>
+
+              <!-- Floating Tech Icon Badges -->
+              <div
+                class="absolute -top-6 -right-6 p-4 rounded-2xl glass-card text-cyan-glow border border-cyan-glow/40 shadow-neon-sm z-30">
+                <i class="ph-bold ph-shield-check text-3xl"></i>
+              </div>
+              <div
+                class="absolute -bottom-6 -left-6 p-4 rounded-2xl glass-card text-royal border border-royal/40 shadow-lg z-30">
+                <i class="ph-bold ph-database text-3xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- index.html ফাইলের ভেতরে -->
+
+  <!-- সার্ভিস সেকশন লোড হওয়ার জায়গা -->
+  <div id="services-container"></div>
+
+  <script>
+    // আলাদা file থেকে services.html লোড করার স্ক্রিপ্ট
+    fetch('services.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('services-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading services:', error));
+  </script>
+
+  <!-- index.html ফাইলের ভেতরে -->
+
+  <!-- প্রোডাক্ট সেকশন লোড হওয়ার জায়গা -->
+  <!-- Products Container (যেখানে products.html লোড হবে) -->
+  <div id="products-container"></div>
+
+  <script>
+    // ১. products.html ফাইল ডাইনামিকভাবে লোড করা
+    fetch('products.html')
+      .then(response => response.text())
+      .then(data => {
+        // প্রোডাক্টের পুরো HTML কনটেন্ট কনটেইনারে বসানো
+        document.getElementById('products-container').innerHTML = data;
+
+        // প্রোডাক্ট লোড হওয়া মাত্রই DOM থেকে সার্চ লিস্ট (allProducts) তৈরি করা
+        initSearchIndex();
+
+        // ফিল্টার ট্যাব অলরেডি অ্যাক্টিভ করা
+        if (typeof filterProducts === 'function') {
+          filterProducts('all');
+        }
+      })
+      .catch(error => console.error('Error loading products.html:', error));
+
+    // ২. DOM থেকে প্রোডাক্ট মেটাডাটা রিড করে সার্চ ইন্ডেক্স তৈরি করা
+    function initSearchIndex() {
+      window.allProducts = [];
+      const cards = document.querySelectorAll('.product-card');
+
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || card.querySelector('h4')?.innerText || '';
+        const category = card.getAttribute('data-category') || 'hardware';
+        const desc = card.querySelector('p')?.innerText || '';
+        const price = card.querySelector('.text-cyan-glow')?.innerText || '';
+
+        if (title) {
+          window.allProducts.push({
+            title: title,
+            category: category,
+            desc: desc,
+            price: price,
+            element: card
+          });
+        }
+      });
+    }
+
+    // ৩. গ্লোবাল সার্চ হ্যান্ডলার (টাইপ করার সাথে সাথে গ্রিড ও ড্রপডাউন সার্চ)
+    function handleGlobalSearch() {
+      const input = (document.getElementById('globalSearch')?.value || document.getElementById('mobileSearch')?.value || '').toLowerCase().trim();
+      const dropdown = document.getElementById('searchDropdown');
+      const cards = document.querySelectorAll('.product-card');
+
+      // গ্রিডের প্রোডাক্ট কার্ড শো/হাইড করা
+      let matchCount = 0;
+      cards.forEach(card => {
+        const title = (card.getAttribute('data-title') || card.innerText).toLowerCase();
+        if (input === '' || title.includes(input)) {
+          card.style.display = 'flex';
+          matchCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (!dropdown) return;
+
+      // ইনপুট খালি থাকলে ড্রপডাউন হাইড করা
+      if (input === '') {
+        dropdown.classList.add('hidden');
+        dropdown.innerHTML = '';
+        return;
+      }
+
+      dropdown.classList.remove('hidden');
+
+      // সার্চ রেজাল্ট ড্রপডাউনে সাজানো
+      const matches = (window.allProducts || []).filter(p =>
+        p.title.toLowerCase().includes(input) || p.desc.toLowerCase().includes(input)
+      );
+
+      if (matches.length === 0) {
+        dropdown.innerHTML = `<div class="p-4 text-xs text-slate-400 text-center">No hardware found matching "${input}"</div>`;
+      } else {
+        dropdown.innerHTML = matches.map(p => `
+        <div onclick="scrollToProduct('${p.title.replace(/'/g, "\\'")}')" class="p-3 hover:bg-navy-800 rounded-xl cursor-pointer transition-colors flex items-center justify-between border-b border-slate-800/50 last:border-0">
+          <div>
+            <div class="text-xs font-bold text-white">${p.title}</div>
+            <div class="text-[10px] text-slate-400">${p.desc.substring(0, 45)}...</div>
+          </div>
+          <div class="text-xs font-bold text-cyan-glow">${p.price}</div>
+        </div>
+      `).join('');
+      }
+    }
+
+    // ৪. ড্রপডাউনের আইটেমে ক্লিক করলে মসৃণভাবে প্রোডাক্ট কার্ডে স্ক্রল হওয়া
+    function scrollToProduct(title) {
+      const dropdown = document.getElementById('searchDropdown');
+      if (dropdown) dropdown.classList.add('hidden');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const cardTitle = card.getAttribute('data-title') || card.querySelector('h4')?.innerText || '';
+        if (cardTitle.toLowerCase().includes(title.toLowerCase())) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          card.classList.add('ring-2', 'ring-cyan-glow');
+          setTimeout(() => card.classList.remove('ring-2', 'ring-cyan-glow'), 2000);
+        }
+      });
+    }
+
+    // ৫. ক্যাটাগরি ফিল্টার ফাংশন (All, Networking, CCTV, Electric ইত্যাদি)
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const tabs = document.querySelectorAll('.product-tab');
+
+      tabs.forEach(tab => {
+        if (tab.getAttribute('data-cat') === category) {
+          tab.className = "product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-cyan-glow text-navy-900 shadow-neon-sm transition-all";
+        } else {
+          tab.className = "product-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-navy-800 text-slate-300 hover:text-cyan-glow border border-slate-700 transition-all";
+        }
+      });
+
+      cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+  <!-- Managing Director & Company Vision Section -->
+  <section id="about" class="py-24 bg-navy-900/40 border-t border-b border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Leader Image Spotlight Card (Updated with MD Image from second file) -->
+        <div class="lg:col-span-5 relative">
+          <div class="glass-card p-4 rounded-3xl border border-cyan-glow/30 relative overflow-hidden group">
+            <div
+              class="aspect-[4/5] rounded-2xl bg-gradient-to-t from-navy-900 via-navy-800 to-royal/30 flex flex-col items-center justify-center relative overflow-hidden text-center p-6 border border-white/10">
+              <!-- MD Image added from index (1).html -->
+              <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-cyan-glow to-royal p-1 mb-4 shadow-neon">
+                <img src="images/MD.jpg" alt="Md. Jems Aamed Joy" class="w-full h-full rounded-full object-cover">
+              </div>
+              <h3 class="text-2xl font-bold text-white font-tech">Md. Jems Aamed Joy</h3>
+              <p class="text-xs font-mono text-cyan-glow uppercase tracking-widest mt-1">Managing Director</p>
+              <p class="text-slate-300 text-xs mt-4 leading-relaxed max-w-xs">
+                "Driven by innovation, guided by vision — shaping digital experiences that inspire. As the founder and
+                developer behind this platform, I blend creativity with code to bring powerful ideas to life."
+              </p>
+
+              <div class="flex items-center gap-3 mt-6">
+                <!-- Updated with multiple Facebook Pages from second file -->
+                <a href="https://www.facebook.com/techbditsolutions/" target="_blank"
+                  class="w-10 h-10 rounded-xl bg-navy-900 text-cyan-glow flex items-center justify-center border border-cyan-glow/30 hover:bg-cyan-glow hover:text-navy-900 transition-all"
+                  title="Facebook Page 1">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="mailto:info.techbditsolutions@gmail.com"
+                  class="w-10 h-10 rounded-xl bg-navy-900 text-cyan-glow flex items-center justify-center border border-cyan-glow/30 hover:bg-cyan-glow hover:text-navy-900 transition-all">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+8801323056735"
+                  class="w-10 h-10 rounded-xl bg-navy-900 text-cyan-glow flex items-center justify-center border border-cyan-glow/30 hover:bg-cyan-glow hover:text-navy-900 transition-all">
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Company Narrative -->
+        <div class="lg:col-span-7 space-y-4">
+          <span
+            class="text-xs font-tech text-cyan-glow uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-cyan-glow/10 border border-cyan-glow/20">
+            About Tech BD IT Solutions</span>
+          <h2 class="text-3xl sm:text-2xl font-bold text-white tracking-widest leading-tight uppercase mt-3"
+            style="font-family: 'Syncopate', sans-serif;">
+            YOUR RELIABLE IT PARTNER IN BANGLADESH
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">We are a dynamic and forward-thinking corporate IT
+            solution provider. We provide state-of the-art technological services under one roof to ensure the
+            uninterrupted, secure, and well organized operations of modern commercial organizations. We are committed to
+            building new office spaces and further strengthening and modernizing the digital infrastructure of existing
+            businesses. Our primary goal is to maximize your business productivity and ensure complete security through
+            the precise application of technology.</p>
+          <p class="text-slate-300 text-base leading-relaxed">
+            24/7 Direct Engineering Helpdesk: Live Chat | WhatsApp | Direct Call
+          </p>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Our Commitment: Smart, secure, and reliable technology solutions—always on time, always within your
+            reach.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl glass-card border border-slate-800">
+              <i class="ph-bold ph-shield-check text-2xl text-cyan-glow mb-2"></i>
+              <h4 class="text-white font-bold text-sm">Certified Tech Support</h4>
+              <p class="text-xs text-slate-400 mt-1">Directly trained and certified for Mikrotik RouterOS and
+                Dahua/Hikvision systems.</p>
+            </div>
+            <div class="p-4 rounded-2xl glass-card border border-slate-800">
+              <i class="ph-bold ph-clock-afternoon text-2xl text-cyan-glow mb-2"></i>
+              <h4 class="text-white font-bold text-sm">Rapid On-Site Dispatch</h4>
+              <p class="text-xs text-slate-400 mt-1">Fast emergency technicians response across Dhaka metro area
+                within
+                guaranteed turnaround time.</p>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="#contact"
+              class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-royal to-cyan-glow text-navy-900 font-bold text-sm tracking-wide shadow-neon hover:scale-105 transition-all">
+              Partner With Us
+            </a>
+            <button onclick="openModal('reviewModal')"
+              class="px-6 py-3.5 rounded-xl glass-card text-slate-200 border border-slate-700 hover:border-cyan-glow hover:text-cyan-glow font-semibold text-sm transition-all">
+              <i class="ph-bold ph-star text-amber-400 mr-2"></i> Leave a Review
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact & Map Section -->
+  <section id="contact" class="py-24 bg-navy-780/50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header Aligned Left & Right (Like 2nd Code Style) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-6">
+        <div>
+          <span
+            class="text-xs font-tech text-cyan-glow uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-cyan-glow/10 border border-cyan-glow/20">
+            Get In Touch
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">
+            Reach Out To Our Engineers
+          </h2>
+        </div>
+
+        <div class="max-w-md text-slate-400 text-sm">
+          <p>Have an inquiry, project proposal, or urgent technical issue? Contact our helpline or visit our Dhaka
+            office.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Contact Info Cards -->
+        <div class="lg:col-span-5 space-y-2">
+          <!-- Phone Numbers Card -->
+          <div
+            class="glass-card p-6 rounded-3xl border border-cyan-glow/20 flex items-start gap-4 transition-all duration-300 hover:border-cyan-glow/50">
+            <div class="p-3.5 rounded-2xl bg-cyan-glow/10 text-cyan-glow text-2xl shrink-0">
+              <i class="ph-bold ph-phone-call"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white">Direct Phone Hotlines</h4>
+              <p class="text-xs text-slate-400 mb-2">Available 24/7 for urgent network dispatch</p>
+              <div class="space-y-1 font-tech font-semibold text-sm text-cyan-glow">
+                <div>
+                  <a href="tel:09638665205" class="hover:underline">+88 09638665205</a>
+                  <span class="text-xs text-slate-400 font-normal">(Hotline)</span>
+                </div>
+                <div><a href="tel:+8801516573873" class="hover:underline">+880 1516-573873</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div
+            class="glass-card p-6 rounded-3xl border border-cyan-glow/20 flex items-start gap-4 transition-all duration-300 hover:border-cyan-glow/50">
+            <div class="p-3.5 rounded-2xl bg-royal/20 text-cyan-glow text-2xl shrink-0">
+              <i class="ph-bold ph-envelope-simple"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white">Official Email</h4>
+              <p class="text-xs text-slate-400 mb-2">Send official RFQs or proposal requests</p>
+              <a href="mailto:info.techbditsolutions@gmail.com"
+                class="text-sm font-semibold text-cyan-glow hover:underline break-all">
+                info.techbditsolutions@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- Location Card -->
+          <div
+            class="glass-card p-6 rounded-3xl border border-cyan-glow/20 flex items-start gap-4 transition-all duration-300 hover:border-cyan-glow/50">
+            <div class="p-3.5 rounded-2xl bg-amber-500/10 text-amber-400 text-2xl shrink-0">
+              <i class="ph-bold ph-map-pin"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white">Head Office Address</h4>
+              <p class="text-sm text-slate-300 mt-1">
+                Dhaka-1205, Bangladesh
+              </p>
+              <p class="text-xs text-slate-400 mt-1">Service Coverage: All 64 Districts of Bangladesh</p>
+            </div>
+          </div>
+
+          <!-- Connect On Facebook Card -->
+          <div
+            class="glass-card p-6 rounded-3xl border border-cyan-glow/20 transition-all duration-300 hover:border-cyan-glow/50">
+            <h4 class="text-sm font-bold text-white mb-3">See Our Work on Facebook</h4>
+            <div class="flex flex-row flex-wrap items-center gap-4 text-xs">
+              <a href="https://www.facebook.com/techbditsolutions/" target="_blank"
+                class="text-cyan-glow hover:underline flex items-center gap-2">
+                <i class="fa-brands fa-facebook text-sm"></i> techbditsolutions
+              </a>
+              <span class="text-slate-600 hidden sm:inline">|</span>
+              <a href="https://www.facebook.com/techbditsolution.fb" target="_blank"
+                class="text-cyan-glow hover:underline flex items-center gap-2">
+                <i class="fa-brands fa-facebook text-sm"></i> techbditsolution.fb
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Message Form -->
+        <div class="lg:col-span-7">
+          <form onsubmit="handleFormSubmit(event)"
+            class="glass-card p-3 rounded-3xl border border-cyan-glow/30 space-y-6 shadow-xl">
+            <h3 class="text-xl font-bold text-white uppercase tracking-wide">SEND US A MESSAGE</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Your Name *</label>
+                <input type="text" required placeholder="e.g. Mohammad Jems"
+                  class="w-full bg-navy-900 border border-slate-700 focus:border-cyan-glow rounded-xl p-3 text-sm text-white focus:outline-none transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Phone Number *</label>
+                <input type="tel" required placeholder="017XXXXXXXX"
+                  class="w-full bg-navy-900 border border-slate-700 focus:border-cyan-glow rounded-xl p-3 text-sm text-white focus:outline-none transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Interested Service *</label>
+              <select
+                class="w-full bg-navy-900 border border-slate-700 focus:border-cyan-glow rounded-xl p-3 text-sm text-white focus:outline-none transition-colors">
+                <option class="bg-navy-900 text-slate-400">---Select---</option>
+                <option class="bg-navy-900 text-white">Comprehensive Networking Solution</option>
+                <option class="bg-navy-900 text-white">CCTV & Security Surveillance</option>
+                <option class="bg-navy-900 text-white">Access Control & Attendance System</option>
+                <option class="bg-navy-900 text-white">Software / E-Commerce Development</option>
+                <option class="bg-navy-900 text-white">Computer & Desktop Maintenance</option>
+                <option class="bg-navy-900 text-white">PBX & IP Phone (Intercom) System</option>
+                <option class="bg-navy-900 text-white">Printer & Network Sharing</option>
+                <option class="bg-navy-900 text-white">Digital Solution & Marketing</option>
+                <option class="bg-navy-900 text-white">Electrical Solution (IPS & Online UPS)</option>
+                <option class="bg-navy-900 text-white">Professional IT Training</option>
+                <option class="bg-navy-900 text-white">General Tech Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Message Details *</label>
+              <textarea rows="6" required placeholder="Describe your requirement, office size, or technical issue..."
+                class="w-full bg-navy-900 border border-slate-700 focus:border-cyan-glow rounded-xl p-3 text-sm text-white focus:outline-none transition-colors"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-glow via-cyan-electric to-royal text-navy-900 font-extrabold text-sm uppercase tracking-wider shadow-neon hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+              <i class="ph-bold ph-paper-plane-tilt text-lg"></i> Dispatch Inquiry Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- New Section Added Above Payment Partners -->
+  <section class="py-0 bg-navy-0 border-b border-slate-800">
+    <div class="max-w-0xl mx-auto px-0 sm:px-0 lg:px-0 text-center">
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Payment Partners Banner (Unchanged as requested) -->
+  <section class="py-12 bg-navy-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs font-tech text-slate-400 uppercase tracking-widest mb-8">Supported Secure Payment Methods </p>
+      <div
+        class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 opacity-80 hover:opacity-100 transition-opacity">
+        <!-- Nagad -->
+        <div
+          class="glass-card px-6 py-3 rounded-2xl border border-orange-500/20 flex items-center gap-2 hover:border-orange-500 transition-all">
+          <img src="images/Nagod.png" alt="Nagad" style="height: 30px;">
+          <span class="font-bold text-sm text-orange-400 font-tech">Nagad</span>
+        </div>
+        <!-- bKash -->
+        <div
+          class="glass-card px-6 py-3 rounded-2xl border border-pink-500/20 flex items-center gap-2 hover:border-pink-500 transition-all">
+          <img src="images/Bkash.jpg" alt="bKash" style="height: 30px;">
+          <span class="font-bold text-sm text-pink-400 font-tech">bKash</span>
+        </div>
+        <!-- DBBL -->
+        <div
+          class="glass-card px-6 py-3 rounded-2xl border border-emerald-500/20 flex items-center gap-2 hover:border-emerald-500 transition-all">
+          <img src="images/DBBL.png" alt="DBBL" style="height: 30px;">
+          <span class="font-bold text-sm text-emerald-400 font-tech">DBBL</span>
+        </div>
+        <!-- BRAC Bank -->
+        <div
+          class="glass-card px-6 py-3 rounded-2xl border border-blue-500/20 flex items-center gap-2 hover:border-blue-500 transition-all">
+          <img src="images/BracBank.png" alt="Brac Bank" style="height: 30px;">
+          <span class="font-bold text-sm text-blue-400 font-tech">BRAC Bank</span>
+        </div>
+        <!-- Visa -->
+        <div
+          class="glass-card px-6 py-3 rounded-2xl border border-cyan-glow/20 flex items-center gap-2 hover:border-cyan-glow transition-all">
+          <img src="images/visa.png" alt="Visa" style="height: 30px;">
+          <span class="font-bold text-sm text-slate-200 font-tech">VISA Card</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-navy-950 border-t border-slate-800 pt-16 pb-24 lg:pb-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+
+            <span class="font-tech text-2xl font-bold text-white">TECH BD <span class="text-cyan-glow">IT
+                SOLUTIONS</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm text-justify">
+            Welcome to Tech bd it solutions—your dynamic corporate IT partner. We deliver state-of-the-art technology
+            services under one roof to ensure secure, uninterrupted, and modern business operations, maximizing your
+            productivity through precise technical innovation.
+          </p>
+          <div class="text-xs text-slate-300">
+            <p class="font-semibold text-white">Lead Systems Developer:</p>
+            <p class="text-cyan-glow font-mono mt-0.5">Mohammad Jems</p>
+          </div>
+        </div>
+
+        <!-- Technical Services -->
+        <div class="lg:col-span-0">
+          <h4 class="text-white font-bold text-sm mb-0 font-tech">Specialties</h4>
+          <ul class="grid grid-cols-0 gap-x-0 gap-y-0 text-xs">
+            <li><span class="hover:text-cyan-glow cursor-pointer">Networking Solutions</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">CCTV & Surveillance</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">Access Control</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">Computer Support</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">PBX & Intercom</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">Printer Sharing</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">Digital Solutions</span></li>
+            <li><span class="hover:text-cyan-glow cursor-pointer">Electrical & UPS</span></li>
+            <li class="col-span-0"><span class="hover:text-cyan-glow cursor-pointer">Professional IT Training</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 font-tech">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-cyan-glow transition-colors">About</a></li>
+            <li><a href="#hero" class="hover:text-cyan-glow transition-colors">Home</a></li>
+            <li><a href="#services" class="hover:text-cyan-glow transition-colors">Services</a></li>
+            <li><a href="#products" class="hover:text-cyan-glow transition-colors">Product</a></li>
+            <li><a href="#contact" class="hover:text-cyan-glow transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Hotlines & Support -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 font-tech">Support</h4>
+          <div class="space-y-1.5 text-xs">
+            <p class="text-cyan-glow font-bold">+88 09638665205</p>
+            <p class="text-slate-300">+8801516-573873</p>
+            <p class="text-slate-300">+8801813-714516</p>
+            <p class="text-slate-300">Dhaka, Bangladesh</p>
+            <p class="text-slate-300">info.techbditsolutions@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4 text-slate-500">
+        <p>© 2025 Tech BD IT Solutions. All Rights Reserved.</p>
+        <p>Designed & Engineered by :<span class="text-cyan-glow font-semibold"> Tech bd it solutions.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick-Action Bar & Live WhatsApp Widget (Updated with correct WhatsApp number +8801323056735) -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+    <!-- Live Simulated Floating Chat Trigger Box -->
+    <div id="chatBoxWindow"
+      class="hidden glass-card rounded-2xl p-4 w-72 sm:w-80 shadow-2xl border border-cyan-glow/40 mb-2">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-700/60 mb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></div>
+          <span class="text-xs font-bold text-white">Tech BD Assistant</span>
+        </div>
+        <button onclick="toggleChatWindow()" class="text-slate-400 hover:text-white"><i
+            class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="space-y-3 text-xs max-h-48 overflow-y-auto custom-scrollbar p-1" id="chatMessages">
+        <div class="bg-navy-900 p-2.5 rounded-xl text-slate-200 border border-slate-800">
+          Hello! Welcome to Tech BD IT Solutions. How can we help you today with Mikrotik, CCTV, or hardware?
+        </div>
+      </div>
+      <div class="mt-3 flex gap-2">
+        <input type="text" id="chatInput" onkeydown="if(event.key==='Enter') sendChatMessage()"
+          placeholder="Type message..."
+          class="w-full bg-navy-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-glow">
+        <button onclick="sendChatMessage()"
+          class="bg-cyan-glow text-navy-900 font-bold px-3 py-1.5 rounded-lg text-xs hover:scale-105"><i
+            class="ph-bold ph-paper-plane-right"></i></button>
+      </div>
+    </div>
+
+    <button onclick="toggleChatWindow()"
+      class="w-12 h-12 rounded-full glass-card border border-cyan-glow/40 text-cyan-glow flex items-center justify-center text-xl shadow-neon hover:scale-110 transition-all">
+      <i class="ph-bold ph-chat-circle-dots"></i>
+    </button>
+
+    <a href="https://wa.me/8801323056735" target="_blank"
+      class="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-all relative group">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span
+        class="absolute right-16 bg-navy-900 text-white text-[11px] px-3 py-1 rounded-lg border border-emerald-500 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Chat
+        on WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Mobile Sticky Call Bar -->
+  <div
+    class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy-900/95 backdrop-blur-lg border-t border-cyan-glow/20 p-3 flex items-center justify-around">
+    <a href="tel:09638665205" class="flex flex-col items-center text-cyan-glow text-xs">
+      <i class="ph-bold ph-phone-call text-lg"></i>
+      <span>Hotline</span>
+    </a>
+    <a href="https://wa.me/8801323056735" target="_blank" class="flex flex-col items-center text-emerald-400 text-xs">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button onclick="openModal('quickQuoteModal')" class="flex flex-col items-center text-amber-400 text-xs">
+      <i class="ph-bold ph-calculator text-lg"></i>
+      <span>Quote</span>
+    </button>
+  </div>
+
+  <!-- MODAL 1: MD Spotlight Card Modal (Updated with MD Image) -->
+  <div id="mdModal"
+    class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-cyan-glow/40 relative shadow-2xl">
+      <button onclick="closeModal('mdModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="text-center space-y-4">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-cyan-glow to-royal p-1 mx-auto shadow-neon">
+          <img src="images/MD.jpg" alt="Md. Jems Aamed Joy" class="w-full h-full rounded-full object-cover">
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white font-tech">Md. Jems Aamed Joy</h3>
+          <p class="text-xs font-mono text-cyan-glow uppercase tracking-widest mt-0.5">Managing Director
+          </p>
+        </div>
+        <p
+          class="text-xs text-slate-300 leading-relaxed text-left bg-navy-900/80 p-4 rounded-2xl border border-slate-800">
+          Driven by innovation, guided by vision — shaping digital experiences that inspire. As the founder and
+          developer behind this platform, I blend creativity with code to bring powerful ideas to life.
+        </p>
+        <div class="pt-2 flex justify-center gap-3">
+          <a href="https://www.facebook.com/techbditsolutions/" target="_blank"
+            class="px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold text-xs flex items-center gap-2">
+            <i class="fa-brands fa-facebook"></i> facebook
+          </a>
+          <a href="tel:+8801323056735"
+            class="px-4 py-2 rounded-xl bg-cyan-glow text-navy-900 font-bold text-xs flex items-center gap-2">
+            <i class="fa-solid fa-phone"></i> Direct Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Job Application Modal ("Join Us - IT Technician") -->
+  <div id="careerModal"
+    class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-cyan-glow/40 relative shadow-2xl">
+      <button onclick="closeModal('careerModal')"
+        class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-cyan-glow/10 text-cyan-glow text-2xl">
+            <i class="ph-bold ph-briefcase"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white">Join Our IT Team</h3>
+            <p class="text-xs text-slate-400">Position: Network & Surveillance Technician</p>
+          </div>
+        </div>
+
+        <form onsubmit="handleCareerSubmit(event)" class="space-y-4 pt-2">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
+            <input type="text" required placeholder="Applicant Name"
+              class="w-full bg-navy-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-cyan-glow">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+            <input type="tel" required placeholder="01XXXXXXXXX"
+              class="w-full bg-navy-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-cyan-glow">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Key Expertise</label>
+            <select
+              class="w-full bg-navy-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-cyan-glow">
+              <option>Mikrotik / RouterOS Configuration</option>
+              <option>CCTV Wiring & IP Camera Setup</option>
+              <option>Workstation Hardware Maintenance</option>
+              <option>Web & App Development</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Upload Resume (PDF/Doc)</label>
+            <div
+              class="border-2 border-dashed border-slate-700 rounded-xl p-4 text-center cursor-pointer hover:border-cyan-glow transition-colors">
+              <i class="ph-bold ph-upload-simple text-2xl text-cyan-glow mb-1"></i>
+              <p class="text-[11px] text-slate-400">Click to select CV or drag file here</p>
+              <input type="file" class="hidden" id="cvUpload"
+                onchange="document.getElementById('fileName').innerText = this.files[0].name">
+              <span id="fileName" class="text-xs text-cyan-glow font-mono mt-1 block"></span>
+            </div>
+          </div>
+          <button type="submit"
+            class="w-full py-3 rounded-xl bg-gradient-to-r from-royal to-cyan-glow text-navy-900 font-bold text-xs uppercase tracking-wider shadow-neon">
+            Submit Job Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: Instant Quick Quote Calculator Modal -->
+  <div id="quickQuoteModal"
+    class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-cyan-glow/40 relative shadow-2xl">
+      <button onclick="closeModal('quickQuoteModal')"
+        class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <i class="ph-bold ph-calculator text-cyan-glow"></i> Instant Cost Estimator
+        </h3>
+        <p class="text-xs text-slate-400">Select your required services to generate an estimated budget:</p>
+
+        <div class="space-y-3 pt-2">
+          <label
+            class="flex items-center justify-between p-3 rounded-xl bg-navy-900 border border-slate-800 cursor-pointer">
+            <span class="text-xs text-slate-200">MikroTik Router Configuration</span>
+            <input type="checkbox" value="5000" onchange="calculateQuote()" class="quote-check accent-cyan-glow">
+          </label>
+          <label
+            class="flex items-center justify-between p-3 rounded-xl bg-navy-900 border border-slate-800 cursor-pointer">
+            <span class="text-xs text-slate-200">4-Camera CCTV IP Installation</span>
+            <input type="checkbox" value="18500" onchange="calculateQuote()" class="quote-check accent-cyan-glow">
+          </label>
+          <label
+            class="flex items-center justify-between p-3 rounded-xl bg-navy-900 border border-slate-800 cursor-pointer">
+            <span class="text-xs text-slate-200">Server Rack Cabling & Dressing</span>
+            <input type="checkbox" value="6500" onchange="calculateQuote()" class="quote-check accent-cyan-glow">
+          </label>
+          <label
+            class="flex items-center justify-between p-3 rounded-xl bg-navy-900 border border-slate-800 cursor-pointer">
+            <span class="text-xs text-slate-200">Online UPS Power System</span>
+            <input type="checkbox" value="25000" onchange="calculateQuote()" class="quote-check accent-cyan-glow">
+          </label>
+        </div>
+
+        <div class="p-4 rounded-xl bg-navy-900/90 border border-cyan-glow/30 flex items-center justify-between">
+          <span class="text-xs text-slate-300 font-semibold">Estimated Total:</span>
+          <span class="text-xl font-bold font-tech text-cyan-glow" id="quoteTotal">৳ 0</span>
+        </div>
+
+        <button onclick="sendQuoteToWhatsApp()"
+          class="w-full py-3 rounded-xl bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Send Quote via WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: Product Inquiry Detail Modal -->
+  <div id="productModal"
+    class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-cyan-glow/40 relative shadow-2xl">
+      <button onclick="closeModal('productModal')"
+        class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-white" id="modalProductTitle">Product Title</h3>
+        <div class="text-2xl font-bold font-tech text-cyan-glow" id="modalProductPrice">৳ 0</div>
+        <p class="text-xs text-slate-300 bg-navy-900 p-3 rounded-xl border border-slate-800" id="modalProductDesc">
+          Description...</p>
+
+        <div class="pt-2 space-y-2">
+          <a id="modalOrderWhatsApp" href="#" target="_blank"
+            class="w-full py-3 rounded-xl bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp
+          </a>
+          <a id="modalOrderCall" href="tel:09638665205"
+            class="w-full py-3 rounded-xl bg-navy-900 text-cyan-glow border border-cyan-glow/30 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+            <i class="ph-bold ph-phone-call"></i> Call Hotline
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: Leave Review Modal -->
+  <div id="reviewModal"
+    class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card max-w-md w-full rounded-3xl p-6 sm:p-8 border border-cyan-glow/40 relative shadow-2xl">
+      <button onclick="closeModal('reviewModal')"
+        class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <i class="ph-bold ph-star text-amber-400"></i> Customer Feedback
+        </h3>
+        <form onsubmit="handleReviewSubmit(event)" class="space-y-3">
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Your Name</label>
+            <input type="text" required placeholder="Client Name"
+              class="w-full bg-navy-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-cyan-glow">
+          </div>
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Star Rating</label>
+            <select
+              class="w-full bg-navy-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-cyan-glow">
+              <option>⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+              <option>⭐⭐⭐⭐ (4/5 Very Good)</option>
+              <option>⭐⭐⭐ (3/5 Good)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs text-slate-300 mb-1">Feedback Comments</label>
+            <textarea rows="3" required placeholder="How was your service experience with Tech BD?"
+              class="w-full bg-navy-900 border border-slate-700 rounded-xl p-2.5 text-xs text-white focus:outline-none focus:border-cyan-glow"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full py-3 rounded-xl bg-gradient-to-r from-royal to-cyan-glow text-navy-900 font-bold text-xs uppercase tracking-wider shadow-neon">
+            Publish Review
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

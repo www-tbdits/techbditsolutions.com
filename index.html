@@ -56,6 +56,21 @@
       }
     }
   </script>
+  <script>
+  // ১. শুধু রাইট-ক্লিক মেনু বন্ধ করার জন্য (লেখা সিলেক্ট বা কপি করা যাবে)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // ২. F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J শর্টকাট বন্ধ করার জন্য
+  document.onkeydown = function(e) {
+    if (e.keyCode == 123 || // F12
+        (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || // Ctrl+Shift+I / J
+        (e.ctrlKey && e.keyCode == 85)) { // Ctrl+U
+      return false;
+    }
+  };
+</script>
 </head>
 
 <body
